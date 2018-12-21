@@ -1,0 +1,43 @@
+{
+  "name": "vue-window-size",
+  "version": "0.0.0",
+  "description": "Reactivity window size for Vue.js.",
+  "main": "dist/vue-window-size.common.js",
+  "unpkg": "dist/vue-window-size.umd.min.js",
+  "repository": "https://github.com/mya-ake/vue-window-size.git",
+  "bugs": {
+    "url": "https://github.com/mya-ake/vue-window-size/issues"
+  },
+  "author": "mya-ake <tatsuya@neko-note.help>",
+  "license": "MIT",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name vue-window-size src/index.js",
+    "lint": "vue-cli-service lint",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
+    "@vue/cli-plugin-unit-jest": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-prettier": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "standard-version": "^4.4.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue.js",
+    "window size"
+  ]
+}
