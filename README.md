@@ -94,3 +94,11 @@ import { vueWindowSize } from 'vue-window-size';
 
 vueWindowSize.setDelay(1000);
 ```
+
+## Contribution
+
+If you find a bug or want to contribute to the code or documentation, you can help by submitting an [issue](https://github.com/mya-ake/vue-window-size/issues) or a [pull request](https://github.com/mya-ake/vue-window-size/pulls).
+
+## License
+
+[MIT](https://github.com/mya-ake/vue-window-size/blob/master/LICENSE)
