@@ -13,10 +13,7 @@
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-window-size src/index.js",
     "lint": "vue-cli-service lint",
-    "release": "standard-version"
-  },
-  "dependencies": {
-    "vue": "^2.5.17"
+    "release": "yarn build && np"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",
@@ -30,7 +27,8 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
-    "standard-version": "^4.4.0",
+    "np": "^4.0.1",
+    "vue": "^2.5.17",
     "vue-template-compiler": "^2.5.17"
   },
   "files": [
