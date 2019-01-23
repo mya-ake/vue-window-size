@@ -5,10 +5,6 @@ export default class WindowSize {
     this._delay = delay;
     this._timer = null;
     this._initialized = false;
-    if (typeof window === 'undefined') {
-      return;
-    }
-
     this._handler = this._handleResize.bind(this);
   }
 
@@ -41,6 +37,9 @@ export default class WindowSize {
   }
 
   init() {
+    if (typeof window === 'undefined') {
+      return;
+    }
     if (this.initialized) {
       return this;
     }
