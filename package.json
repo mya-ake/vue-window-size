@@ -17,6 +17,9 @@
     "prerelease": "yarn test:unit && yarn build && rimraf dist/demo.html",
     "release": "np"
   },
+  "dependencies": {
+    "vue": "^2.5.22"
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",
     "@vue/cli-plugin-eslint": "^3.2.0",
@@ -31,10 +34,7 @@
     "eslint-plugin-vue": "^5.0.0-0",
     "np": "^4.0.1",
     "rimraf": "^2.6.3",
-    "vue-template-compiler": "^2.5.17"
-  },
-  "peerDependencies": {
-    "vue": "^2.5.17"
+    "vue-template-compiler": "^2.5.22"
   },
   "files": [
     "dist"
@@ -42,6 +42,5 @@
   "keywords": [
     "vue.js",
     "window size"
-  ],
-  "dependencies": {}
+  ]
 }

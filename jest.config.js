@@ -8,6 +8,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^~fixtures/(.*)$': '<rootDir>/tests/fixtures/$1',
   },
   snapshotSerializers: ['jest-serializer-vue'],
   testMatch: [
