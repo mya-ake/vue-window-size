@@ -4,12 +4,12 @@ export default class WindowSize {
     this._height = defaults.height;
     this._delay = delay;
     this._timer = null;
+    this._initialized = false;
     if (typeof window === 'undefined') {
       return;
     }
 
-    this.update();
-    window.addEventListener('resize', this._handleResize.bind(this));
+    this._handler = this._handleResize.bind(this);
   }
 
   _handleResize() {
@@ -27,6 +27,10 @@ export default class WindowSize {
     return this._height;
   }
 
+  get initialized() {
+    return this._initialized;
+  }
+
   update() {
     this._width = window.innerWidth;
     this._height = window.innerHeight;
@@ -34,5 +38,24 @@ export default class WindowSize {
 
   setDelay(delay) {
     this._delay = delay;
+  }
+
+  init() {
+    if (this.initialized) {
+      return this;
+    }
+    this.update();
+    window.addEventListener('resize', this._handler);
+    this._initialized = true;
+    return this;
+  }
+
+  destroy() {
+    if (!this.initialized) {
+      return this;
+    }
+    window.removeEventListener('resize', this._handler);
+    this._initialized = false;
+    return this;
   }
 }

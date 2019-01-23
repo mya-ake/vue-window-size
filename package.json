@@ -13,6 +13,7 @@
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-window-size src/index.js",
     "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
     "release": "yarn build && np"
   },
   "devDependencies": {

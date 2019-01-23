@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import WindowSize from './window-size';
 
-export const windowSize = new WindowSize();
+export const windowSize = new WindowSize().init();
 const vm = new Vue({ data: { windowSize } });
 
 export const mixin = {
