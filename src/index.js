@@ -8,6 +8,14 @@ export const vueWindowSize = {
   setDelay(delay) {
     windowSize.setDelay(delay);
   },
+
+  init() {
+    windowSize.init();
+  },
+
+  destroy() {
+    windowSize.destroy();
+  },
 };
 
 function install(Vue, { delay = 50 } = {}) {
