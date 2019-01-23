@@ -14,7 +14,8 @@
     "build": "vue-cli-service build --target lib --name vue-window-size src/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "release": "yarn build && np"
+    "prerelease": "yarn test:unit && yarn build && rimraf dist/demo.html",
+    "release": "np"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",
@@ -29,6 +30,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "np": "^4.0.1",
+    "rimraf": "^2.6.3",
     "vue-template-compiler": "^2.5.17"
   },
   "peerDependencies": {
@@ -40,5 +42,6 @@
   "keywords": [
     "vue.js",
     "window size"
-  ]
+  ],
+  "dependencies": {}
 }
