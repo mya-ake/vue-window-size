@@ -1,6 +1,6 @@
 {
   "name": "vue-window-size",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Reactivity window size for Vue.js.",
   "main": "dist/vue-window-size.common.js",
   "unpkg": "dist/vue-window-size.umd.min.js",
