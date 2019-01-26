@@ -38,7 +38,7 @@ export default class WindowSize {
 
   init() {
     if (typeof window === 'undefined') {
-      return;
+      return this;
     }
     if (this.initialized) {
       return this;
