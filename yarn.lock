@@ -901,15 +901,15 @@
     webpack "^4.0.0"
 
 "@vue/cli-plugin-eslint@^3.2.0":
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.9.2.tgz#747c616b13a11f34ac80554eee899cbfcd1977b8"
-  integrity sha512-AdvWJN+4Px2r3hbTDM2/rCtTcS6VyI7XuRljbfr2V9nF9cJiH4qsXFrTCRj3OgupbXJ14fUGKrLxmznLZIm1jA==
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.11.0.tgz#99b14a9d4ab05d96fc707d958db9de4856133329"
+  integrity sha512-cZWTXFbMu7/Ha6uAyvFsOxjC82afmHk0M9ye2MyeXmkvdL+tB2rcIITbd9HZypPaky1qv46Mp5l/lSd9W4PVCA==
   dependencies:
-    "@vue/cli-shared-utils" "^3.9.0"
+    "@vue/cli-shared-utils" "^3.11.0"
     babel-eslint "^10.0.1"
     eslint-loader "^2.1.2"
     globby "^9.2.0"
-    webpack ">=4 < 4.29"
+    webpack "^4.0.0"
     yorkie "^2.0.0"
   optionalDependencies:
     eslint "^4.19.1"
