@@ -33,7 +33,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "np": "^4.0.1",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.0",
     "vue-template-compiler": "^2.5.22"
   },
   "files": [
