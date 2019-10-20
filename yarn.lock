@@ -1249,14 +1249,14 @@
     "@vue/cli-shared-utils" "^4.0.4"
 
 "@vue/cli-plugin-unit-jest@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-4.0.3.tgz#8fa7a5b280325ddb9455104985c719c44768d370"
-  integrity sha512-7IAIJNJK+VJzaEVb9rStR/E9ga3cQKuthwz1wDFJUHyXNP3fuVQ0H6WuMLRs0c2QdEtV+zoWBpQwr++jf6PXJQ==
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-4.0.4.tgz#c9496fc7a33f101daaecf67a83959c0155b4c19f"
+  integrity sha512-+Du5Wv/NfvdbGC2t+orfGZg3dAMwAkRW0tk39DvVxb2IR4+pfQf9VDfqXnPlEBesLPaUz/YFH2KB+OQS/slFSA==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-transform-modules-commonjs" "^7.4.4"
     "@types/jest" "^24.0.18"
-    "@vue/cli-shared-utils" "^4.0.3"
+    "@vue/cli-shared-utils" "^4.0.4"
     babel-core "^7.0.0-bridge.0"
     babel-jest "^24.9.0"
     babel-plugin-transform-es2015-modules-commonjs "^6.26.2"
