@@ -1,7 +1,7 @@
 import {PluginObject} from 'vue'
 
 export interface VueWindowSizeOption {
-  delay: number;
+  delay?: number;
 }
 
 interface VueWindowSizeAPI {
