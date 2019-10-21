@@ -3,10 +3,13 @@ import Vue, { ComponentOptions } from 'vue';
 import VueWindowSizePlugin, {
   vueWindowSize,
   vueWindowSizeMixin,
-} from './../../src/index';
+  VueWindowSizeOption,
+} from '../index';
 
 /** plugin */
-Vue.use(VueWindowSizePlugin);
+Vue.use<VueWindowSizeOption>(VueWindowSizePlugin);
+Vue.use<VueWindowSizeOption>(VueWindowSizePlugin, {});
+Vue.use<VueWindowSizeOption>(VueWindowSizePlugin, { delay: 10 });
 
 const vm = new Vue({
   mounted() {
