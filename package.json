@@ -4,6 +4,7 @@
   "description": "Reactivity window size for Vue.js.",
   "main": "dist/vue-window-size.common.js",
   "unpkg": "dist/vue-window-size.umd.min.js",
+  "types": "types/index.d.ts",
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
     "url": "https://github.com/mya-ake/vue-window-size/issues"
@@ -13,8 +14,10 @@
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-window-size src/index.js",
     "lint": "vue-cli-service lint",
+    "test": "run-s test:*",
     "test:unit": "vue-cli-service test:unit",
-    "prerelease": "yarn test:unit && yarn build && rimraf dist/demo.html",
+    "test:types": "tsc -p types/test",
+    "prerelease": "yarn test && yarn build && rimraf dist/demo.html",
     "release": "np"
   },
   "dependencies": {
@@ -31,13 +34,17 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0-0",
     "np": "^5.1.0",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.0",
+    "typescript": "^3.6.4",
     "vue-template-compiler": "^2.5.22"
   },
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "keywords": [
     "vue.js",
