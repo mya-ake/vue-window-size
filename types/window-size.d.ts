@@ -1,4 +1,4 @@
-import {PluginObject} from 'vue'
+import { PluginObject } from 'vue';
 
 export interface VueWindowSizeOption {
   delay?: number;
