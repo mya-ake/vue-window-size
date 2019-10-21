@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "strict": true,
+    "noEmit": true,
+    "allowJs": true,
+    "noUnusedLocals": false,
+    "lib": ["es5", "dom"]
+  },
+  "include": ["*.ts", "../*.d.ts", "../../src/*.js"]
+}
