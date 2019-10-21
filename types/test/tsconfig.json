@@ -5,9 +5,8 @@
     "moduleResolution": "node",
     "strict": true,
     "noEmit": true,
-    "allowJs": true,
     "noUnusedLocals": false,
     "lib": ["es5", "dom"]
   },
-  "include": ["*.ts", "../*.d.ts", "../../src/*.js"]
+  "include": ["*.ts", "../*.d.ts"]
 }
