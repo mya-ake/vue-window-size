@@ -1,0 +1,23 @@
+name: Main Workflow
+
+on: [push, pull_request]
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.16.3
+      - name: Intall
+        run: yarn install --frozen-lockfile
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test
+      - name: Build
+        run: yarn build
