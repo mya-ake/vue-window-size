@@ -3,8 +3,8 @@ name: Main Workflow
 on: [push, pull_request]
 
 jobs:
-  run:
-    name: Run
+  main:
+    name: Main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
