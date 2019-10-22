@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/vue-window-size.svg)](https://badge.fury.io/js/vue-window-size)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![CI Status](https://github.com/mya-ake/vue-window-size/workflows/Main%20Workflow/badge.svg)
 
 > Provides reactivity window size properties for Vue.js.
 
