@@ -88,7 +88,7 @@ Vue.use(VueWindowSize, {
 
 ### `setDelay(delay: number)`
 
-Same as deplay option.
+Same as delay option.
 
 ```JavaScript
 import { vueWindowSize } from 'vue-window-size';
