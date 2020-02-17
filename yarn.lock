@@ -4160,6 +4160,11 @@ es-to-primitive@^1.2.0:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+escape-goat@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/escape-goat/-/escape-goat-3.0.0.tgz#e8b5fb658553fe8a3c4959c316c6ebb8c842b19c"
+  integrity sha512-w3PwNZJwRxlp47QGzhuEBldEqVHHhh8/tIPcl6ecf2Bou99cdAt0knihBV0Ecc7CGxYduXVBDheH1K2oADRlvw==
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -6921,10 +6926,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-listr-input@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/listr-input/-/listr-input-0.2.0.tgz#3a038978fa14a3392dccdda4358777f970fe24c7"
-  integrity sha512-k5cKZllYKKFyTe/B6H4m9NWm/Px49OVvZXT28khQ9xrZQMYADh4zqMk7507/0Jdbg0tPjS0xTbvfrX9Yn6b7Yw==
+listr-input@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/listr-input/-/listr-input-0.2.1.tgz#ce735c34530683580388fdf9462ecfebd3b66126"
+  integrity sha512-oa8iVG870qJq+OuuMK3DjGqFcwsK1SDu+kULp9kEq09TY231aideIZenr3lFOQdASpAr6asuyJBbX62/a3IIhg==
   dependencies:
     inquirer "^7.0.0"
     inquirer-autosubmit-prompt "^0.2.0"
@@ -7818,9 +7823,9 @@ normalize-url@^4.1.0:
   integrity sha512-0NLtR71o4k6GLP+mr6Ty34c5GA6CMoEsncKJxvQd8NzPxaHRJNnb5gZE8R1XF4CPIS7QPHLJ74IFszwtNVAHVQ==
 
 np@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/np/-/np-6.0.0.tgz#f0867231ee102e67a590d36f260bf5515640a220"
-  integrity sha512-hjgJjp2++zb7ibBvzm0is9J3ny0bGbFeLzznwvYdmaj7kpKg12rQDTyyY1qBdjGQShMDYwtOJN+n02bHw/SnnA==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/np/-/np-6.1.0.tgz#e220c460341fad9cdff21f414fdbe15368a1c678"
+  integrity sha512-6L34Clfm3TdFKeaITLtpNuQc/huMnPOXP4pRWSBgqtsxLJGknjgtHSxRq556AzexIODFpT+d7K/X9IW7XNfQfQ==
   dependencies:
     "@samverschueren/stream-to-observable" "^0.3.0"
     any-observable "^0.5.0"
@@ -7828,6 +7833,7 @@ np@^6.0.0:
     chalk "^3.0.0"
     cosmiconfig "^6.0.0"
     del "^4.1.0"
+    escape-goat "^3.0.0"
     escape-string-regexp "^2.0.0"
     execa "^4.0.0"
     github-url-from-git "^1.5.0"
@@ -7838,7 +7844,7 @@ np@^6.0.0:
     is-scoped "^2.1.0"
     issue-regex "^3.1.0"
     listr "^0.14.3"
-    listr-input "^0.2.0"
+    listr-input "^0.2.1"
     log-symbols "^3.0.0"
     meow "^6.0.0"
     new-github-release-url "^1.0.0"
