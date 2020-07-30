@@ -5,7 +5,7 @@ export const vueWindowSizeMixin = mixin;
 
 // Public API
 export const vueWindowSize = {
-  setDelay(delay) {
+  setDelay(delay: number) {
     windowSize.setDelay(delay);
   },
 
@@ -18,9 +18,13 @@ export const vueWindowSize = {
   },
 };
 
-function install(Vue, { delay = 50 } = {}) {
-  if (install.installed) return;
-  install.installed = true;
+const state = {
+  installed: false,
+};
+
+function install(Vue: Vue.VueConstructor, { delay = 50 } = {}) {
+  if (state.installed) return;
+  state.installed = true;
 
   windowSize.setDelay(delay);
   Vue.mixin({
@@ -33,7 +37,9 @@ const plugin = { install };
 let GlobalVue = null;
 if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
+  // @ts-ignore
 } else if (typeof global !== 'undefined') {
+  // @ts-ignore
   GlobalVue = global.Vue;
 }
 if (GlobalVue) {
