@@ -20,5 +20,10 @@ export default {
     format,
   },
 
-  plugins: [typescript(), uglify()],
+  plugins: [
+    typescript({
+      tsconfig: 'tsconfig.build.json',
+    }),
+    uglify(),
+  ],
 };

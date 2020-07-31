@@ -2,9 +2,9 @@
   "name": "vue-window-size",
   "version": "0.2.5",
   "description": "Reactivity window size for Vue.js.",
-  "main": "dist/vue-window-size.common.js",
-  "unpkg": "dist/vue-window-size.umd.min.js",
-  "types": "types/index.d.ts",
+  "main": "dist/index.common.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
     "url": "https://github.com/mya-ake/vue-window-size/issues"

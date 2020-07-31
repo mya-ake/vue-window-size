@@ -1,5 +1,12 @@
 import { mixin, windowSize } from './mixin';
 
+declare module 'vue/types/vue' {
+  interface Vue {
+    windowWidth: number;
+    windowHeight: number;
+  }
+}
+
 // mixin
 export const vueWindowSizeMixin = mixin;
 
