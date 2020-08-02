@@ -1,12 +1,5 @@
 import { mixin, windowSize } from './mixin';
 
-declare module 'vue/types/vue' {
-  interface Vue {
-    windowWidth: number;
-    windowHeight: number;
-  }
-}
-
 // mixin
 export const vueWindowSizeMixin = mixin;
 
@@ -54,3 +47,15 @@ if (GlobalVue) {
 }
 
 export default plugin;
+
+/** types */
+declare module 'vue/types/vue' {
+  interface Vue {
+    windowWidth: number;
+    windowHeight: number;
+  }
+}
+
+export interface VueWindowSizeOption {
+  delay?: number;
+}
