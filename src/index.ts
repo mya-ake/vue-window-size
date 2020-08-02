@@ -56,6 +56,6 @@ declare module 'vue/types/vue' {
   }
 }
 
-export interface VueWindowSizeOption {
+export type VueWindowSizeOption = {
   delay?: number;
-}
+};
