@@ -22,6 +22,6 @@ declare module 'vue/types/vue' {
         windowHeight: number;
     }
 }
-export interface VueWindowSizeOption {
+export declare type VueWindowSizeOption = {
     delay?: number;
-}
+};
