@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "types": ["jest"],
+    "declaration": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "strict": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "~fixtures/*": ["./tests/fixtures/*"]
+    }
+  },
+  "include": ["./src/**/*.ts", "./tests/**/*.ts", "./tests/**/*.vue"],
+  "exclude": ["node_modules"]
+}

@@ -1,9 +1,15 @@
 export default class WindowSize {
+  private _width: number;
+  private _height: number;
+  private _delay: number;
+  private _timer: number | undefined;
+  private _initialized: boolean;
+  private _handler: () => void;
+
   constructor({ defaults = { width: 800, height: 600 }, delay = 50 } = {}) {
     this._width = defaults.width;
     this._height = defaults.height;
     this._delay = delay;
-    this._timer = null;
     this._initialized = false;
     this._handler = this._handleResize.bind(this);
   }
@@ -32,7 +38,7 @@ export default class WindowSize {
     this._height = window.innerHeight;
   }
 
-  setDelay(delay) {
+  setDelay(delay: number) {
     this._delay = delay;
   }
 

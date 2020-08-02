@@ -1,10 +1,11 @@
-import WindowSize from '@/window-size';
+import WindowSize from '~/window-size';
 
 const spyAddEvent = jest.spyOn(window, 'addEventListener');
 const spyRemoveEvent = jest.spyOn(window, 'removeEventListener');
 const mockHandler = jest.fn();
 
-let windowSize;
+let windowSize: WindowSize;
+
 beforeEach(() => {
   jest.useFakeTimers();
   spyAddEvent.mockClear();
@@ -12,7 +13,7 @@ beforeEach(() => {
   mockHandler.mockClear();
 
   windowSize = new WindowSize();
-  windowSize._handler = mockHandler;
+  windowSize['_handler'] = mockHandler;
   windowSize.init();
 });
 
@@ -23,7 +24,7 @@ afterEach(() => {
 describe('init method', () => {
   it('runs', () => {
     expect(spyAddEvent).toHaveBeenCalledTimes(1);
-    expect(spyAddEvent).toHaveBeenCalledWith('resize', windowSize._handler);
+    expect(spyAddEvent).toHaveBeenCalledWith('resize', windowSize['_handler']);
   });
 
   it('not runs multiple times', () => {
@@ -36,7 +37,10 @@ describe('destroy method', () => {
   it('runs', () => {
     windowSize.destroy();
     expect(spyRemoveEvent).toHaveBeenCalledTimes(1);
-    expect(spyRemoveEvent).toHaveBeenCalledWith('resize', windowSize._handler);
+    expect(spyRemoveEvent).toHaveBeenCalledWith(
+      'resize',
+      windowSize['_handler']
+    );
   });
 
   it('not runs multiple times', () => {
@@ -80,7 +84,7 @@ describe('delay', () => {
 });
 
 describe('update', () => {
-  let spyUpdate;
+  let spyUpdate: jest.SpyInstance;
 
   beforeEach(() => {
     windowSize = new WindowSize().init();

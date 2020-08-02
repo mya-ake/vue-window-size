@@ -1,10 +1,10 @@
 {
   "name": "vue-window-size",
-  "version": "0.2.5",
+  "version": "0.3.0-3",
   "description": "Reactivity window size for Vue.js.",
-  "main": "dist/vue-window-size.common.js",
-  "unpkg": "dist/vue-window-size.umd.min.js",
-  "types": "types/index.d.ts",
+  "main": "dist/index.common.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
     "url": "https://github.com/mya-ake/vue-window-size/issues"
@@ -12,42 +12,53 @@
   "author": "mya-ake <tatsuya@neko-note.help>",
   "license": "MIT",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name vue-window-size src/index.js",
-    "lint": "vue-cli-service lint",
+    "prebuild": "rimraf dist",
+    "build": "run-s build:*",
+    "build:cjs": "BUILD_FORMAT=cjs rollup --config rollup.config.js",
+    "build:umd": "BUILD_FORMAT=umd rollup --config rollup.config.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "run-s test:*",
-    "test:unit": "vue-cli-service test:unit",
-    "test:types": "tsc -p types/test",
-    "prerelease": "yarn test && yarn build && rimraf dist/demo.html",
+    "test:unit": "jest --config tests/unit/jest.config.js",
+    "prerelease": "run-s build",
     "release": "np"
   },
   "dependencies": {
-    "vue": "^2.5.22"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.2",
-    "@vue/cli-plugin-eslint": "^4.0.3",
-    "@vue/cli-plugin-unit-jest": "^4.0.3",
-    "@vue/cli-service": "^4.0.3",
-    "@vue/eslint-config-prettier": "^4.0.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "eslint": "^6.6.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^6.0.0",
-    "np": "^6.0.0",
+    "@types/jest": "^26.0.7",
+    "@vue/test-utils": "^1.0.3",
+    "husky": "^4.2.5",
+    "jest": "^26.2.1",
+    "lint-staged": "^10.2.11",
+    "np": "^6.3.2",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.0",
-    "typescript": "^3.6.4",
-    "vue-template-compiler": "^2.5.22"
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7",
+    "vue-jest": "^3.0.6",
+    "vue-template-compiler": "^2.6.11"
   },
   "files": [
-    "dist",
-    "types"
+    "dist/index.common.js",
+    "dist/index.umd.js",
+    "dist/index.d.ts"
   ],
   "keywords": [
     "vue.js",
     "window size"
-  ]
+  ],
+  "lint-staged": {
+    "*.{js,ts,json,md,yml}": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
