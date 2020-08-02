@@ -45,7 +45,9 @@
     "vue-template-compiler": "^2.6.11"
   },
   "files": [
-    "dist"
+    "dist/index.common.js",
+    "dist/index.umd.js",
+    "dist/index.d.ts"
   ],
   "keywords": [
     "vue.js",
