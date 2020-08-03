@@ -1,16 +1,9 @@
 import Vue from 'vue';
 import WindowSize from './window-size';
 
-type Vm = {
-  windowSize: {
-    width: number;
-    height: number;
-  };
-};
-
 export const windowSize = new WindowSize().init();
 
-const vm = ((): Vm => {
+const vm = (() => {
   return typeof Vue.observable === 'function'
     ? Vue.observable({ windowSize })
     : new Vue({ data: { windowSize } });
