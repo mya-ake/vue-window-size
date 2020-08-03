@@ -2,7 +2,12 @@ import Vue from 'vue';
 import WindowSize from './window-size';
 
 export const windowSize = new WindowSize().init();
-const vm = new Vue({ data: { windowSize } });
+
+const vm = (() => {
+  return typeof Vue.observable === 'function'
+    ? Vue.observable({ windowSize })
+    : new Vue({ data: { windowSize } });
+})();
 
 export const mixin = {
   computed: {
