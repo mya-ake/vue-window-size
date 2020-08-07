@@ -36,6 +36,7 @@ describe('public API', () => {
       expect(mocks.subscribe).toBeCalledTimes(1);
     });
   });
+
   describe('destroy', () => {
     it('unsubscribe is called', () => {
       api.destroy();
