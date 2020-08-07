@@ -1,16 +1,17 @@
 import { createMixin } from '~/mixin';
-import type { Subject, WindowResizeSubjectEvent } from '~/type';
+import type { WindowResizeSubject } from '~/type';
 
 const mocks = {
   addObserver: jest.fn(),
   subscribe: jest.fn(),
 };
+mocks.addObserver.mockReturnValue(mocks);
 
-const createSubject = (): Subject<WindowResizeSubjectEvent> =>
+const createSubject = (): WindowResizeSubject =>
   (({
     addObserver: mocks.addObserver,
     subscribe: mocks.subscribe,
-  } as unknown) as Subject<WindowResizeSubjectEvent>);
+  } as unknown) as WindowResizeSubject);
 
 describe('mixin', () => {
   afterEach(() => {

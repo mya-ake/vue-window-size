@@ -1,9 +1,5 @@
 import Vue from 'vue';
-import type {
-  WindowResizeObserver,
-  Subject,
-  WindowResizeSubjectEvent,
-} from './type';
+import type { WindowResizeObserver, WindowResizeSubject } from './type';
 
 type Vm = {
   width: number;
@@ -21,14 +17,13 @@ const createVm = () => {
     : new Vue<Vm>({ data: createInitailValue() });
 };
 
-export const createMixin = (subject: Subject<WindowResizeSubjectEvent>) => {
+export const createMixin = (subject: WindowResizeSubject) => {
   const vm = createVm();
   const observer: WindowResizeObserver = ({ width, height }) => {
     vm.width = width;
     vm.height = height;
   };
-  subject.addObserver('option', observer);
-  subject.subscribe();
+  subject.addObserver('option', observer).subscribe();
 
   return {
     computed: {
