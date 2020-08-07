@@ -1,22 +1,39 @@
 import Vue from 'vue';
-import WindowSize from './window-size';
+import type { WindowResizeObserver, WindowResizeSubject } from './type';
 
-export const windowSize = new WindowSize().init();
+type Vm = {
+  width: number;
+  height: number;
+};
 
-const vm = (() => {
+const createInitailValue = (): Vm => ({
+  width: 800,
+  height: 600,
+});
+
+const createVm = () => {
   return typeof Vue.observable === 'function'
-    ? Vue.observable({ windowSize })
-    : new Vue({ data: { windowSize } });
-})();
+    ? Vue.observable<Vm>(createInitailValue())
+    : new Vue<Vm>({ data: createInitailValue() });
+};
 
-export const mixin = {
-  computed: {
-    windowWidth() {
-      return vm.windowSize.width;
-    },
+export const createMixin = (subject: WindowResizeSubject) => {
+  const vm = createVm();
+  const observer: WindowResizeObserver = ({ width, height }) => {
+    vm.width = width;
+    vm.height = height;
+  };
+  subject.addObserver('option', observer).subscribe();
 
-    windowHeight() {
-      return vm.windowSize.height;
+  return {
+    computed: {
+      windowWidth() {
+        return vm.width;
+      },
+
+      windowHeight() {
+        return vm.height;
+      },
     },
-  },
+  };
 };
