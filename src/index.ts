@@ -1,22 +1,14 @@
-import { mixin, windowSize } from './mixin';
+import { WindowResizeSubject } from './WindowResizeSubject';
+import { createMixin } from './mixin';
+import { createPublicAPI } from './public-api';
+
+const subject = new WindowResizeSubject();
 
 // mixin
-export const vueWindowSizeMixin = mixin;
+export const vueWindowSizeMixin = createMixin(subject);
 
 // Public API
-export const vueWindowSize = {
-  setDelay(delay: number) {
-    windowSize.setDelay(delay);
-  },
-
-  init() {
-    windowSize.init();
-  },
-
-  destroy() {
-    windowSize.destroy();
-  },
-};
+export const vueWindowSize = createPublicAPI(subject);
 
 const state = {
   installed: false,
@@ -26,9 +18,9 @@ function install(Vue: Vue.VueConstructor, { delay = 50 } = {}) {
   if (state.installed) return;
   state.installed = true;
 
-  windowSize.setDelay(delay);
+  subject.setDelay(delay);
   Vue.mixin({
-    mixins: [mixin],
+    mixins: [vueWindowSizeMixin],
   });
 }
 
