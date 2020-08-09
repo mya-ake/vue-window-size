@@ -24,7 +24,8 @@
     "release": "np"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "window-resize-subject": "^1.0.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.7",

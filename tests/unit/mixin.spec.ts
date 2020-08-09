@@ -1,5 +1,5 @@
 import { createMixin } from '~/mixin';
-import type { WindowResizeSubject } from '~/type';
+import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {
   addObserver: jest.fn(),

@@ -5862,6 +5862,11 @@ widest-line@^3.1.0:
   dependencies:
     string-width "^4.0.0"
 
+window-resize-subject@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/window-resize-subject/-/window-resize-subject-1.0.0.tgz#bf3c98f0caa3522d2a0f76300265ff4c21728d77"
+  integrity sha512-NBwMyDVjgcEjyQBCBT9ywz6lOz7I0roT32yKBuVALu/pK6XKpMp8oartIKn4I9o/FHLGM0Xn9XKHr2mAVfU3gg==
+
 word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"

@@ -1,4 +1,4 @@
-import { WindowResizeSubject } from './WindowResizeSubject';
+import { WindowResizeSubject } from 'window-resize-subject';
 import { createMixin } from './mixin';
 import { createPublicAPI } from './public-api';
 

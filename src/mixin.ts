@@ -1,5 +1,8 @@
 import Vue from 'vue';
-import type { WindowResizeObserver, WindowResizeSubject } from './type';
+import type {
+  WindowResizeObserver,
+  WindowResizeSubject,
+} from 'window-resize-subject';
 
 type Vm = {
   width: number;
