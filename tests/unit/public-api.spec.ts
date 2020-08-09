@@ -1,5 +1,5 @@
 import { createPublicAPI } from '~/public-api';
-import type { WindowResizeSubject } from '~/WindowResizeSubject';
+import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {
   setDelay: jest.fn(),
