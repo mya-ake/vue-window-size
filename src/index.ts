@@ -14,7 +14,7 @@ const state = {
   installed: false,
 };
 
-function install(Vue: Vue.VueConstructor, { delay = 50 } = {}) {
+function install(Vue: Vue.VueConstructor, { delay = 33 } = {}) {
   if (state.installed) return;
   state.installed = true;
 

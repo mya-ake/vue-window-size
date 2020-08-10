@@ -69,7 +69,8 @@ export default {
 ### `delay` (option)
 
 - type: `Number`
-- default: `50`
+- default: `33`
+  - About 30 FPS
 
 Change delay time of resize event.
 
