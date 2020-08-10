@@ -24,8 +24,7 @@
     "release": "np"
   },
   "dependencies": {
-    "vue": "^2.6.11",
-    "window-resize-subject": "^1.0.0"
+    "window-resize-subject": "^1.4.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.7",
@@ -42,8 +41,12 @@
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7",
+    "vue": "^2.6.11",
     "vue-jest": "^3.0.6",
     "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "vue": ">=2.6"
   },
   "files": [
     "dist/index.common.js",
