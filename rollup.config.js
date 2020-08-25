@@ -1,5 +1,5 @@
 import typescript from 'rollup-plugin-typescript2';
-import { uglify } from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
 
 const format = process.env.BUILD_FORMAT;
 
@@ -24,6 +24,6 @@ export default {
     typescript({
       tsconfig: 'tsconfig.build.json',
     }),
-    uglify(),
+    terser(),
   ],
 };
