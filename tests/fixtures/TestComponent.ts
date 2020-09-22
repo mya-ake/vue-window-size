@@ -1,6 +1,6 @@
-import Vue from 'vue';
+import { defineComponent } from 'vue-demi';
 
-export default Vue.extend({
+export default defineComponent({
   template: `
   <div>
     <div id="width">{{ windowWidth }}</div>

@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { reactive } from 'vue-demi';
 import type {
   WindowResizeObserver,
   WindowResizeSubject,
@@ -14,14 +14,8 @@ const createInitailValue = (): Vm => ({
   height: 600,
 });
 
-const createVm = () => {
-  return typeof Vue.observable === 'function'
-    ? Vue.observable<Vm>(createInitailValue())
-    : new Vue<Vm>({ data: createInitailValue() });
-};
-
 export const createMixin = (subject: WindowResizeSubject) => {
-  const vm = createVm();
+  const vm = reactive(createInitailValue());
   const observer: WindowResizeObserver = ({ width, height }) => {
     vm.width = width;
     vm.height = height;

@@ -1,6 +1,7 @@
 import { WindowResizeSubject } from 'window-resize-subject';
 import { createMixin } from './mixin';
 import { createPublicAPI } from './public-api';
+import type { App } from 'vue-demi';
 
 const subject = new WindowResizeSubject();
 
@@ -10,39 +11,20 @@ export const vueWindowSizeMixin = createMixin(subject);
 // Public API
 export const vueWindowSize = createPublicAPI(subject);
 
-const state = {
-  installed: false,
-};
-
-function install(Vue: Vue.VueConstructor, { delay = 33 } = {}) {
-  if (state.installed) return;
-  state.installed = true;
-
+function install(app: App, { delay = 33 } = {}) {
   subject.setDelay(delay);
-  Vue.mixin({
+  app.mixin({
     mixins: [vueWindowSizeMixin],
   });
 }
 
 const plugin = { install };
 
-let GlobalVue = null;
-if (typeof window !== 'undefined') {
-  GlobalVue = window.Vue;
-  // @ts-ignore
-} else if (typeof global !== 'undefined') {
-  // @ts-ignore
-  GlobalVue = global.Vue;
-}
-if (GlobalVue) {
-  GlobalVue.use(plugin);
-}
-
 export default plugin;
 
 /** types */
-declare module 'vue/types/vue' {
-  interface Vue {
+declare module '@vue/runtime-core' {
+  export interface ComponentCustomProperties {
     windowWidth: number;
     windowHeight: number;
   }
