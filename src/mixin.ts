@@ -9,12 +9,19 @@ type Vm = {
   height: number;
 };
 
+export type Mixin = {
+  computed: {
+    windowWidth: () => number;
+    windowHeight: () => number;
+  };
+};
+
 const createInitailValue = (): Vm => ({
   width: 800,
   height: 600,
 });
 
-export const createMixin = (subject: WindowResizeSubject) => {
+export const createMixin = (subject: WindowResizeSubject): Mixin => {
   const vm = reactive(createInitailValue());
   const observer: WindowResizeObserver = ({ width, height }) => {
     vm.width = width;

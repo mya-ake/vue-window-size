@@ -17,7 +17,7 @@ const createSubject = (): WindowResizeSubject =>
 describe('public API', () => {
   let api: ReturnType<typeof createPublicAPI>;
   beforeEach(() => {
-    api = createPublicAPI(createSubject());
+    api = createPublicAPI(createSubject);
   });
   afterEach(() => {
     jest.clearAllMocks();

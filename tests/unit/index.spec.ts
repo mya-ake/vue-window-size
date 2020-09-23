@@ -1,4 +1,4 @@
-import { shallowMount, mount, config } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue-demi';
 
 import VueWindowSize, { vueWindowSizeMixin } from '~/index';
@@ -77,11 +77,10 @@ describe('Plugin', () => {
 });
 
 describe('Mixin', () => {
-  config.plugins.VueWrapper.reset();
   it('has property', () => {
     const wrapper = shallowMount(TestComponent, {
       global: {
-        mixins: [vueWindowSizeMixin],
+        mixins: [vueWindowSizeMixin()],
       },
     });
 
