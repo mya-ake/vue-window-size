@@ -1,13 +1,9 @@
 import { reactive } from 'vue-demi';
+import { createInitailSize } from './shared';
 import type {
   WindowResizeObserver,
   WindowResizeSubject,
 } from 'window-resize-subject';
-
-type Vm = {
-  width: number;
-  height: number;
-};
 
 export type Mixin = {
   computed: {
@@ -16,18 +12,13 @@ export type Mixin = {
   };
 };
 
-const createInitailValue = (): Vm => ({
-  width: 800,
-  height: 600,
-});
-
 export const createMixin = (subject: WindowResizeSubject): Mixin => {
-  const vm = reactive(createInitailValue());
+  const vm = reactive(createInitailSize());
   const observer: WindowResizeObserver = ({ width, height }) => {
     vm.width = width;
     vm.height = height;
   };
-  subject.addObserver('option', observer).subscribe();
+  subject.addObserver('option-api', observer).subscribe();
 
   return {
     computed: {

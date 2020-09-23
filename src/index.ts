@@ -1,6 +1,7 @@
 import { WindowResizeSubject } from 'window-resize-subject';
 import { createMixin } from './mixin';
 import { createPublicAPI } from './public-api';
+import { createUseWindowSize } from './composition-api';
 import type { App } from 'vue-demi';
 import type { Mixin } from './mixin';
 
@@ -33,6 +34,10 @@ function install(app: App, { delay = 33 } = {}) {
   });
 }
 
+// Composition API
+export const useWindowSize = createUseWindowSize(getSubject);
+
+// plugin
 const plugin = { install };
 
 export default plugin;
