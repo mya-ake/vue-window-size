@@ -13,9 +13,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "run-s build:*",
-    "build:cjs": "BUILD_FORMAT=cjs rollup --config rollup.config.js",
-    "build:umd": "BUILD_FORMAT=umd rollup --config rollup.config.js",
+    "build": "rollup --config rollup.config.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "run-s test:*",

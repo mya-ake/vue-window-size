@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue-demi';
 
-import { VueWindowSizePlugin, vueWindowSizeMixin } from '~/index';
+import { VueWindowSizePlugin, vueWindowSizeMixin } from '~/option-api';
 import OptionComponent from '~fixtures/OptionComponent';
 import CompositionComponent from '~fixtures/CompositionComponent';
 
