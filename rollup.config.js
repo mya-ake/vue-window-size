@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
+import dts from 'rollup-plugin-dts';
 
 const createFileName = ({ name, format }) => {
   switch (format) {
@@ -30,10 +31,9 @@ const entries = {
 };
 
 const createBuildConfig = ({ name, format }) => {
-  return {
+  const jsBuildConfig = {
     input: `./src/${name}.ts`,
     output: {
-      name: `bundle.${name}.${format}.js`,
       file: `dist/${createFileName({ name, format })}`,
       format,
     },
@@ -45,10 +45,21 @@ const createBuildConfig = ({ name, format }) => {
       terser(),
     ],
   };
+
+  const dtsBuildConfig = {
+    input: `./src/${name}.ts`,
+    output: {
+      file: `${name}.d.ts`,
+      format: 'es',
+    },
+    plugins: [dts()],
+  };
+
+  return [jsBuildConfig, dtsBuildConfig];
 };
 
 const createBuildConfigs = () => {
   return Object.values(entries).map(createBuildConfig);
 };
 
-export default createBuildConfigs();
+export default createBuildConfigs().flat();

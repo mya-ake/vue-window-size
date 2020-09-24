@@ -4,7 +4,7 @@
     "module": "esnext",
     "lib": ["esnext", "dom"],
     "types": ["jest"],
-    "declaration": true,
+    "declaration": false,
     "outDir": "./dist",
     "removeComments": true,
     "strict": true,
