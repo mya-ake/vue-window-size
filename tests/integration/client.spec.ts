@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue-demi';
 
-import VueWindowSize, { vueWindowSizeMixin } from '~/index';
+import { VueWindowSizePlugin, vueWindowSizeMixin } from '~/index';
 import OptionComponent from '~fixtures/OptionComponent';
 import CompositionComponent from '~fixtures/CompositionComponent';
 
@@ -41,7 +41,7 @@ describe('Plugin', () => {
     it('has property', () => {
       const wrapper = shallowMount(OptionComponent, {
         global: {
-          plugins: [VueWindowSize],
+          plugins: [VueWindowSizePlugin],
         },
       });
 
@@ -52,7 +52,7 @@ describe('Plugin', () => {
     it('shown values', () => {
       const wrapper = shallowMount(OptionComponent, {
         global: {
-          plugins: [VueWindowSize],
+          plugins: [VueWindowSizePlugin],
         },
       });
 
@@ -65,7 +65,7 @@ describe('Plugin', () => {
     it('reactivity', async () => {
       const wrapper = shallowMount(OptionComponent, {
         global: {
-          plugins: [VueWindowSize],
+          plugins: [VueWindowSizePlugin],
         },
       });
 

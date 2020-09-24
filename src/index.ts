@@ -38,9 +38,7 @@ function install(app: App, { delay = 33 } = {}) {
 export const useWindowSize = createUseWindowSize(getSubject);
 
 // plugin
-const plugin = { install };
-
-export default plugin;
+export const VueWindowSizePlugin = { install };
 
 /** types */
 declare module '@vue/runtime-core' {
