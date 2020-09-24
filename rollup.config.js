@@ -4,7 +4,7 @@ import { terser } from 'rollup-plugin-terser';
 const createFileName = ({ name, format }) => {
   switch (format) {
     case 'cjs':
-      return `${name}.common.js`;
+      return `${name}.js`;
     case 'umd':
       return `${name}.umd.js`;
   }
@@ -15,18 +15,18 @@ const entries = {
     name: 'index',
     format: 'cjs',
   },
-  'index-umd': {
-    name: 'index',
-    format: 'umd',
-  },
+  // 'index-umd': {
+  //   name: 'index',
+  //   format: 'umd',
+  // },
   'option-api-cjs': {
     name: 'option-api',
     format: 'cjs',
   },
-  'option-api-umd': {
-    name: 'option-api',
-    format: 'umd',
-  },
+  // 'option-api-umd': {
+  //   name: 'option-api',
+  //   format: 'umd',
+  // },
 };
 
 const createBuildConfig = ({ name, format }) => {
