@@ -1,23 +1,23 @@
-export declare const vueWindowSizeMixin: {
-    computed: {
-        windowWidth(): number;
-        windowHeight(): number;
-    };
-};
-export declare const vueWindowSize: {
+import type { App } from 'vue-demi';
+import type { Mixin } from './mixin';
+export declare const vueWindowSizeMixin: () => Mixin;
+export declare const vueWindowSizeAPI: {
     setDelay(delay: number): void;
     init(): void;
     destroy(): void;
 };
-declare function install(Vue: Vue.VueConstructor, { delay }?: {
+declare function install(app: App, { delay }?: {
     delay?: number | undefined;
 }): void;
-declare const plugin: {
+export declare const useWindowSize: () => {
+    width: import("vue-demi").ComputedRef<number>;
+    height: import("vue-demi").ComputedRef<number>;
+};
+export declare const VueWindowSizePlugin: {
     install: typeof install;
 };
-export default plugin;
-declare module 'vue/types/vue' {
-    interface Vue {
+declare module '@vue/runtime-core' {
+    interface ComponentCustomProperties {
         windowWidth: number;
         windowHeight: number;
     }
@@ -25,3 +25,4 @@ declare module 'vue/types/vue' {
 export declare type VueWindowSizeOption = {
     delay?: number;
 };
+export {};
