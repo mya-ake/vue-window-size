@@ -52,9 +52,7 @@
     "vue": "^2.6.0 || >=3.0.0"
   },
   "files": [
-    "dist/index.common.js",
-    "dist/index.umd.js",
-    "dist/index.d.ts"
+    "dist"
   ],
   "keywords": [
     "vue.js",
