@@ -1,9 +1,12 @@
 import type { WindowResizeSubject } from 'window-resize-subject';
+import type { Config } from './config';
 
 export const createPublicAPI = (getSubject: () => WindowResizeSubject) => {
   return {
-    setDelay(delay: number) {
-      getSubject().setDelay(delay);
+    config(config: Config) {
+      if (typeof config.delay === 'number') {
+        getSubject().setDelay(config.delay);
+      }
     },
 
     init() {

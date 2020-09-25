@@ -21,9 +21,9 @@ describe('public API', () => {
     api = createPublicAPI(createSubject);
   });
 
-  describe('setDelay', () => {
+  describe('config', () => {
     it('setDelay is called', () => {
-      api.setDelay(100);
+      api.config({ delay: 100 });
       expect(mocks.setDelay).toBeCalledWith(100);
     });
   });

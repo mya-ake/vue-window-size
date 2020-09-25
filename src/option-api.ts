@@ -1,13 +1,14 @@
 import { createMixin } from './mixin';
-import { createPublicAPI } from './public-api';
 import { getSubject } from './subject';
+import { createPublicAPI } from './public-api';
 import type { Mixin } from './mixin';
+import type { Config } from './config';
 
 // mixin
 let mixin: Mixin;
 export const vueWindowSizeMixin = (): Mixin => {
   if (!mixin) {
-    mixin = createMixin(getSubject());
+    mixin = createMixin(getSubject);
   }
   return mixin;
 };
@@ -44,6 +45,4 @@ declare module 'vue/types/vue' {
   }
 }
 
-export type VueWindowSizeOption = {
-  delay?: number;
-};
+export type VueWindowSizePluginOption = Config;

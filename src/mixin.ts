@@ -12,13 +12,13 @@ export type Mixin = {
   };
 };
 
-export const createMixin = (subject: WindowResizeSubject): Mixin => {
+export const createMixin = (getSubject: () => WindowResizeSubject): Mixin => {
   const vm = reactive(createInitailSize());
   const observer: WindowResizeObserver = ({ width, height }) => {
     vm.width = width;
     vm.height = height;
   };
-  subject.addObserver('option-api', observer).subscribe();
+  getSubject().addObserver('option-api', observer).subscribe();
 
   return {
     computed: {
