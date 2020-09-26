@@ -22,7 +22,7 @@ describe('mixin', () => {
   describe('createMixin', () => {
     let mixin: ReturnType<typeof createMixin>;
     beforeEach(() => {
-      mixin = createMixin(createSubject());
+      mixin = createMixin(createSubject);
     });
 
     it('subscribe is called', () => {

@@ -4,6 +4,7 @@ import { nextTick } from 'vue';
 import { VueWindowSizePlugin, vueWindowSizeMixin } from '~/option-api';
 import OptionComponent from '~fixtures/OptionComponent';
 import CompositionComponent from '~fixtures/CompositionComponent';
+import { resizeWindow } from '~fixtures/shared';
 
 declare module '@vue/runtime-core' {
   export interface ComponentCustomProperties {
@@ -19,21 +20,9 @@ const WINDOW_SIZE = {
   HEIGHT: 800,
 };
 
-const resizeWindow = (width: number, height: number) => {
-  if (typeof width === 'number') {
-    // @ts-ignore
-    window.innerWidth = width;
-  }
-  if (typeof height === 'number') {
-    // @ts-ignore
-    window.innerHeight = height;
-  }
-  window.dispatchEvent(new Event('resize'));
-  jest.runAllTimers();
-};
-
 beforeEach(() => {
   resizeWindow(WINDOW_SIZE.WIDTH, WINDOW_SIZE.HEIGHT);
+  jest.runAllTimers();
 });
 
 describe('Plugin', () => {
@@ -70,6 +59,7 @@ describe('Plugin', () => {
       });
 
       resizeWindow(400, 300);
+      jest.runAllTimers();
       await nextTick();
       expect(wrapper.find('#width').text()).toBe('400');
       expect(wrapper.find('#height').text()).toBe('300');
@@ -111,6 +101,7 @@ describe('Mixin', () => {
       });
 
       resizeWindow(400, 300);
+      jest.runAllTimers();
       await nextTick();
       expect(wrapper.find('#width').text()).toBe('400');
       expect(wrapper.find('#height').text()).toBe('300');
@@ -133,6 +124,7 @@ describe('Composition API', () => {
       const wrapper = shallowMount(CompositionComponent);
 
       resizeWindow(400, 300);
+      jest.runAllTimers();
       await nextTick();
       expect(wrapper.find('#width').text()).toBe('400');
       expect(wrapper.find('#height').text()).toBe('300');
