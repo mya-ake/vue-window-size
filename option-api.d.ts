@@ -5,9 +5,13 @@ declare type Mixin = {
   };
 };
 
+declare type Config = {
+  delay?: number;
+};
+
 declare const vueWindowSizeMixin: () => Mixin;
 declare const vueWindowSizeAPI: {
-  setDelay(delay: number): void;
+  config(config: Config): void;
   init(): void;
   destroy(): void;
 };
@@ -34,13 +38,11 @@ declare module 'vue/types/vue' {
     windowHeight: number;
   }
 }
-declare type VueWindowSizeOption = {
-  delay?: number;
-};
+declare type VueWindowSizePluginOption = Config;
 
 export {
-  VueWindowSizeOption,
   VueWindowSizePlugin,
+  VueWindowSizePluginOption,
   vueWindowSizeAPI,
   vueWindowSizeMixin,
 };
