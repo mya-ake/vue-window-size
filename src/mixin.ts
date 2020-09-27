@@ -1,40 +1,32 @@
-import Vue from 'vue';
+import { reactive } from 'vue-demi';
+import { createInitailSize } from './shared';
 import type {
   WindowResizeObserver,
   WindowResizeSubject,
 } from 'window-resize-subject';
 
-type Vm = {
-  width: number;
-  height: number;
+export type Mixin = {
+  computed: {
+    $windowWidth: () => number;
+    $windowHeight: () => number;
+  };
 };
 
-const createInitailValue = (): Vm => ({
-  width: 800,
-  height: 600,
-});
-
-const createVm = () => {
-  return typeof Vue.observable === 'function'
-    ? Vue.observable<Vm>(createInitailValue())
-    : new Vue<Vm>({ data: createInitailValue() });
-};
-
-export const createMixin = (subject: WindowResizeSubject) => {
-  const vm = createVm();
+export const createMixin = (getSubject: () => WindowResizeSubject): Mixin => {
+  const vm = reactive(createInitailSize());
   const observer: WindowResizeObserver = ({ width, height }) => {
     vm.width = width;
     vm.height = height;
   };
-  subject.addObserver('option', observer).subscribe();
+  getSubject().addObserver('option-api', observer).subscribe();
 
   return {
     computed: {
-      windowWidth() {
+      $windowWidth() {
         return vm.width;
       },
 
-      windowHeight() {
+      $windowHeight() {
         return vm.height;
       },
     },

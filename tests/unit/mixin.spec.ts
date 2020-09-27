@@ -1,4 +1,5 @@
 import { createMixin } from '~/mixin';
+import { getWindowWidth, getWindowHeight } from '~fixtures/shared';
 import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {
@@ -14,14 +15,14 @@ const createSubject = (): WindowResizeSubject =>
   } as unknown) as WindowResizeSubject);
 
 describe('mixin', () => {
-  afterEach(() => {
+  beforeEach(() => {
     jest.clearAllMocks();
   });
 
   describe('createMixin', () => {
     let mixin: ReturnType<typeof createMixin>;
     beforeEach(() => {
-      mixin = createMixin(createSubject());
+      mixin = createMixin(createSubject);
     });
 
     it('subscribe is called', () => {
@@ -29,17 +30,20 @@ describe('mixin', () => {
     });
 
     it('observer is set', () => {
-      expect(mocks.addObserver).toBeCalledWith('option', expect.any(Function));
+      expect(mocks.addObserver).toBeCalledWith(
+        'option-api',
+        expect.any(Function),
+      );
     });
 
     it('has plugin properties', () => {
-      expect(mixin.computed.windowWidth).toBeInstanceOf(Function);
-      expect(mixin.computed.windowHeight).toBeInstanceOf(Function);
+      expect(mixin.computed.$windowWidth).toBeInstanceOf(Function);
+      expect(mixin.computed.$windowHeight).toBeInstanceOf(Function);
     });
 
     it(`windowWidth and windowHeight are vm's value`, () => {
-      expect(mixin.computed.windowWidth()).toBe(800);
-      expect(mixin.computed.windowHeight()).toBe(600);
+      expect(mixin.computed.$windowWidth()).toBe(getWindowWidth());
+      expect(mixin.computed.$windowHeight()).toBe(getWindowHeight());
     });
   });
 });

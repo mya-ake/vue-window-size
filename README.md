@@ -8,28 +8,89 @@
 
 ## Install
 
+### for Vue v3
+
+The following command installs vue-window-size v1.
+
+```bash
+$ yarn add vue-window-size@next
+// or
+$ npm i vue-window-size@next
+```
+
+### for Vue v2
+
+The following command installs vue-window-seize v0.
+
 ```bash
 $ yarn add vue-window-size
+// or
+$ npm i vue-window-size
+```
+
+---
+
+You can install v1 using the following command.  
+When using with vue v1 it depends on the [@vue/composition-api](https://github.com/vuejs/composition-api).
+And requires Vue.js v2.6 or higher.
+
+```bash
+$ yarn add vue-window-size@next @vue/composition-api
+// or
+$ npm i vue-window-size@next @vue/composition-api
 ```
 
 ## Usage
 
-[Plugin](#Plugin) or [Mixin](#Mixin).
+[Composition API](#Composition_API) or [Plugin](#Plugin) or [Mixin](#Mixin).
 
-Plugin all components have window sizes.
+|                             | Composition API |     Plugin     |    Mixin    |
+| :-------------------------: | :-------------: | :------------: | :---------: |
+| has window sizes properties |   only in use   | all components | only in use |
+|     handle resize event     |   only in use   |   all times    |  all times  |
 
-Components with mixin have window sizes.
-Other components don't have window sizes.
+### Composition API
+
+Use with component.
+
+```JavaScript
+<template>
+  <div>
+    <p>window width: {{ windowWidth }}</p>
+    <p>window height: {{ windowHeight }}</p>
+  </div>
+</template>
+
+<script>
+import { useWindowSize } from 'vue-window-size';
+
+export default {
+  setup() {
+    const { width, height } = useWindowSize();
+    return {
+      windowWidth: width,
+      windowHeight: height,
+    };
+  },
+};
+</script>
+```
+
+> note: useWindowSize handles a Resize Event only when it is in use.
+> Even if it is called by multiple components, the Resize event is processed only once.
+> If it is not used, it will not be handled.
 
 ### Plugin
 
 Install plugin
 
 ```JavaScript
-import Vue from 'vue';
-import VueWindowSize from 'vue-window-size';
+import { createApp } from 'vue';
+import App from "./App.vue";  // your App component
+import { VueWindowSizePlugin } from 'vue-window-size/option-api';
 
-Vue.use(VueWindowSize);
+const app = createApp(App);
+app.use(VueWindowSizePlugin);
 ```
 
 Use with component
@@ -37,8 +98,8 @@ Use with component
 ```HTML
 <template>
   <div>
-    <p>window width: {{ windowWidth }}</p>
-    <p>window height: {{ windowHeight }}</p>
+    <p>window width: {{ $windowWidth }}</p>
+    <p>window height: {{ $windowHeight }}</p>
   </div>
 </template>
 ```
@@ -50,21 +111,21 @@ Use with component
 ```HTML
 <template>
   <div>
-    <p>window width: {{ windowWidth }}</p>
-    <p>window height: {{ windowHeight }}</p>
+    <p>window width: {{ $windowWidth }}</p>
+    <p>window height: {{ $windowHeight }}</p>
   </div>
 </template>
 
 <script>
-import { vueWindowSizeMixin } from 'vue-window-size';
+import { vueWindowSizeMixin } from 'vue-window-size/option-api';
 
 export default {
-  mixins: [vueWindowSizeMixin],
+  mixins: [vueWindowSizeMixin()],
 };
 </script>
 ```
 
-## Options
+## Config for Option API
 
 ### `delay` (option)
 
@@ -77,24 +138,28 @@ Change delay time of resize event.
 e.g.
 
 ```JavaScript
-import Vue from 'vue';
-import VueWindowSize from 'vue-window-size';
+import { createApp } from 'vue';
+import App from "./App.vue";  // your App component
+import { VueWindowSizePlugin } from 'vue-window-size/option-api';
 
-Vue.use(VueWindowSize, {
+const app = createApp(App);
+app.use(VueWindowSizePlugin, {
   delay: 100,
 });
 ```
 
-## Public API
+## Public API for Option API
 
-### `setDelay(delay: number)`
+### `config(config: VueWindowSizeOptionApiConfig)`
 
-Same as delay option.
+Same as config for Option API.
 
 ```JavaScript
-import { vueWindowSize } from 'vue-window-size';
+import { vueWindowSizeAPI } from 'vue-window-size/option-api';
 
-vueWindowSize.setDelay(1000);
+vueWindowSizeAPI.config({
+  delay: 100,
+});
 ```
 
 ### `init()`
@@ -104,9 +169,9 @@ Usually called automatically.
 Please call it if you want to use it again after destroy.
 
 ```JavaScript
-import { vueWindowSize } from 'vue-window-size';
+import { vueWindowSizeAPI } from 'vue-window-size/option-api';
 
-vueWindowSize.init();
+vueWindowSizeAPI.init();
 ```
 
 ### `destroy()`
@@ -114,16 +179,25 @@ vueWindowSize.init();
 Remove the resize event.
 
 ```JavaScript
-import { vueWindowSize } from 'vue-window-size';
+import { vueWindowSizeAPI } from 'vue-window-size/option-api';
 
-vueWindowSize.destroy();
+vueWindowSizeAPI.destroy();
 ```
 
 ## FAQ
 
-### When is removeEventListener called?
+### Why is there no Config in the Composition API?
 
-This library add addEventListener only once, even if it is used in mixin.
+`useWindowSize` is a singleton and handles the resize event.
+Therefore, using `useWindowSize(config)` will affect all components in used.
+Due to the nature of the Composition API, this is not the desired behavior.
+I also think that there are not many use cases that need to be set individually.  
+If requested, I will create a `useAtomicWindowSize(config)` that can be set atomically, so please create an issue.
+Or create a factory function for `createUseWindowSize(config)`.
+
+### When is the removeEventListener called when using plugin and mixin??
+
+vue-window-size adds addEventListener only once, even if it is used in mixin.
 So basically you do not need to call removeEventListener.
 If you want to call removeEventListener please call [destroy](#destroy) method.
 

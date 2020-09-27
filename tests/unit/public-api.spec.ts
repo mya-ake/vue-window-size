@@ -17,15 +17,13 @@ const createSubject = (): WindowResizeSubject =>
 describe('public API', () => {
   let api: ReturnType<typeof createPublicAPI>;
   beforeEach(() => {
-    api = createPublicAPI(createSubject());
-  });
-  afterEach(() => {
     jest.clearAllMocks();
+    api = createPublicAPI(createSubject);
   });
 
-  describe('setDelay', () => {
+  describe('config', () => {
     it('setDelay is called', () => {
-      api.setDelay(100);
+      api.config({ delay: 100 });
       expect(mocks.setDelay).toBeCalledWith(100);
     });
   });
