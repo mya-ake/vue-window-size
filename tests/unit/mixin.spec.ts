@@ -37,13 +37,13 @@ describe('mixin', () => {
     });
 
     it('has plugin properties', () => {
-      expect(mixin.computed.windowWidth).toBeInstanceOf(Function);
-      expect(mixin.computed.windowHeight).toBeInstanceOf(Function);
+      expect(mixin.computed.$windowWidth).toBeInstanceOf(Function);
+      expect(mixin.computed.$windowHeight).toBeInstanceOf(Function);
     });
 
     it(`windowWidth and windowHeight are vm's value`, () => {
-      expect(mixin.computed.windowWidth()).toBe(getWindowWidth());
-      expect(mixin.computed.windowHeight()).toBe(getWindowHeight());
+      expect(mixin.computed.$windowWidth()).toBe(getWindowWidth());
+      expect(mixin.computed.$windowHeight()).toBe(getWindowHeight());
     });
   });
 });

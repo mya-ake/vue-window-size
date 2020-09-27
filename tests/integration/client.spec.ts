@@ -34,8 +34,8 @@ describe('Plugin', () => {
         },
       });
 
-      expect(wrapper.vm.windowWidth).toBe(WINDOW_SIZE.WIDTH);
-      expect(wrapper.vm.windowHeight).toBe(WINDOW_SIZE.HEIGHT);
+      expect(wrapper.vm.$windowWidth).toBe(WINDOW_SIZE.WIDTH);
+      expect(wrapper.vm.$windowHeight).toBe(WINDOW_SIZE.HEIGHT);
     });
 
     it('shown values', () => {
@@ -76,8 +76,8 @@ describe('Mixin', () => {
         },
       });
 
-      expect(wrapper.vm.windowWidth).toBe(WINDOW_SIZE.WIDTH);
-      expect(wrapper.vm.windowHeight).toBe(WINDOW_SIZE.HEIGHT);
+      expect(wrapper.vm.$windowWidth).toBe(WINDOW_SIZE.WIDTH);
+      expect(wrapper.vm.$windowHeight).toBe(WINDOW_SIZE.HEIGHT);
     });
 
     it('shown values', () => {

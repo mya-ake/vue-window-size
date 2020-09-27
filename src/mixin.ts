@@ -7,8 +7,8 @@ import type {
 
 export type Mixin = {
   computed: {
-    windowWidth: () => number;
-    windowHeight: () => number;
+    $windowWidth: () => number;
+    $windowHeight: () => number;
   };
 };
 
@@ -22,11 +22,11 @@ export const createMixin = (getSubject: () => WindowResizeSubject): Mixin => {
 
   return {
     computed: {
-      windowWidth() {
+      $windowWidth() {
         return vm.width;
       },
 
-      windowHeight() {
+      $windowHeight() {
         return vm.height;
       },
     },
