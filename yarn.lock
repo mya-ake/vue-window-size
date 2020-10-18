@@ -782,9 +782,9 @@
   integrity sha512-/X6AUbTFCyD2BcJnBoacUct8qcv1A5uk1+N+3tbzDVuhGPRmoYrTSnNUuF53C/GIsTkChrEiXaJh2kyo/0tRvw==
 
 "@vue/test-utils@^2.0.0-beta.5":
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-beta.6.tgz#2f7a653b0025cd4236968269c5972e807fa1fb2c"
-  integrity sha512-nBj5HHoTD+2xg0OQ93p/Hil5SkFUcNJ5BA2RUnHlOH6a4PVskgMK8dOLyVcZ1ZJif7knjt7yQVJ6K6YwIzeR1A==
+  version "2.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-beta.7.tgz#27751991e0b013ee4af487e51e16a58d477e5857"
+  integrity sha512-cAe7VqoxxkxTr/2N93UpW/LQbcUVKC+QRA3ZBq5ZWImtAf/8jtcdC2mQ9g4AKmSvyaKQtqxrRn4i/y5z7yrrKA==
 
 abab@^2.0.3:
   version "2.0.3"
