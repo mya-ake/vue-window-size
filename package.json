@@ -21,7 +21,7 @@
     "release": "np"
   },
   "dependencies": {
-    "vue-demi": "^0.3.3",
+    "vue-demi": "^0.4.0",
     "window-resize-subject": "^1.4.3"
   },
   "devDependencies": {
