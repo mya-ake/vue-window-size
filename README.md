@@ -13,9 +13,9 @@
 The following command installs vue-window-size v1.
 
 ```bash
-$ yarn add vue-window-size@next
+$ yarn add vue-window-size
 // or
-$ npm i vue-window-size@next
+$ npm i vue-window-size
 ```
 
 ### for Vue v2
@@ -23,9 +23,9 @@ $ npm i vue-window-size@next
 The following command installs vue-window-seize v0.
 
 ```bash
-$ yarn add vue-window-size
+$ yarn add vue-window-size@0.6.2
 // or
-$ npm i vue-window-size
+$ npm i vue-window-size@0.6.2
 ```
 
 ---
@@ -35,9 +35,9 @@ When using with vue v1 it depends on the [@vue/composition-api](https://github.c
 And requires Vue.js v2.6 or higher.
 
 ```bash
-$ yarn add vue-window-size@next @vue/composition-api
+$ yarn add vue-window-size @vue/composition-api
 // or
-$ npm i vue-window-size@next @vue/composition-api
+$ npm i vue-window-size @vue/composition-api
 ```
 
 ## Usage
