@@ -1,7 +1,7 @@
 declare type Mixin = {
   computed: {
-    windowWidth: () => number;
-    windowHeight: () => number;
+    $windowWidth: () => number;
+    $windowHeight: () => number;
   };
 };
 
@@ -28,21 +28,21 @@ declare const VueWindowSizePlugin: {
 };
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    windowWidth: number;
-    windowHeight: number;
+    $windowWidth: number;
+    $windowHeight: number;
   }
 }
 declare module 'vue/types/vue' {
   interface Vue {
-    windowWidth: number;
-    windowHeight: number;
+    $windowWidth: number;
+    $windowHeight: number;
   }
 }
-declare type VueWindowSizePluginOption = Config;
+declare type VueWindowSizeOptionApiConfig = Config;
 
 export {
+  VueWindowSizeOptionApiConfig,
   VueWindowSizePlugin,
-  VueWindowSizePluginOption,
   vueWindowSizeAPI,
   vueWindowSizeMixin,
 };
