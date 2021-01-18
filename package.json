@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "vue-demi": "^0.6.0",
-    "window-resize-subject": "^1.4.3"
+    "window-resize-subject": "^1.4.4"
   },
   "devDependencies": {
     "@types/jest": "^26.0.7",
