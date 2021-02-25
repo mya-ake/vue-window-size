@@ -5909,9 +5909,9 @@ verror@1.10.0:
     extsprintf "^1.2.0"
 
 vue-demi@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.6.0.tgz#e314282f704cb449119b9fd002cbbc0e39f591fe"
-  integrity sha512-8GEJa0mHJpYJeGeq5fD1pJct2kfdl30PHfmL1NaJ97mgKPyKojlIRt/3inGBK4Y0ylCI6T5vOo3chwpqDOq/Hw==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.6.1.tgz#6949c900a295d9c40e1fa5a74a2849b58cc57325"
+  integrity sha512-2DI0owOzgEDnEBoXpp0nTBquAWLZqVf/+AOJpPUnviT17unMELEPNy5BdSRnQEz+DA0STtqaz+MZtwhzlDHm5Q==
 
 vue-jest@^3.0.6:
   version "3.0.7"
