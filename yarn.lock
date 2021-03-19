@@ -5928,10 +5928,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vue-demi@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.6.0.tgz#e314282f704cb449119b9fd002cbbc0e39f591fe"
-  integrity sha512-8GEJa0mHJpYJeGeq5fD1pJct2kfdl30PHfmL1NaJ97mgKPyKojlIRt/3inGBK4Y0ylCI6T5vOo3chwpqDOq/Hw==
+vue-demi@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.7.3.tgz#463188044d31d33985e67da51f315b447a1fed85"
+  integrity sha512-vrzM26H4CZCXBf/eu4T8nks6o7qgziYM52myk8bg+atw4qYqpeWJf5c82W8VdmgGfSIdh9ulOOe9+GeLc3Z/8A==
 
 vue-jest@^3.0.6:
   version "3.0.7"
