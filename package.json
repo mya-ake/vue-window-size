@@ -18,7 +18,8 @@
     "test": "run-s test:*",
     "test:unit": "jest --config tests/unit/jest.config.js",
     "test:integration": "jest --config tests/integration/jest.config.js",
-    "release": "np"
+    "release": "np",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue-demi": "^0.6.0",
@@ -60,10 +61,5 @@
   ],
   "lint-staged": {
     "*.{js,ts,json,md,yml}": "prettier --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
