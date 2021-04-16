@@ -1,8 +1,8 @@
-import { ComputedRef } from 'vue-demi';
+import * as vue from 'vue';
 
 declare const useWindowSize: () => {
-  width: ComputedRef<number>;
-  height: ComputedRef<number>;
+  width: vue.ComputedRef<number>;
+  height: vue.ComputedRef<number>;
 };
 
 export { useWindowSize };
