@@ -7,8 +7,10 @@ const mocks = {
   addObserver: jest.fn(),
   subscribe: jest.fn(),
   unsubscribe: jest.fn(),
+  dispatch: jest.fn(),
 };
 mocks.addObserver.mockReturnValue(mocks);
+mocks.subscribe.mockReturnValue(mocks);
 const createTestComponent = (
   useWindowSize: ReturnType<typeof createUseWindowSize>,
 ) =>
@@ -56,15 +58,17 @@ describe('composition api', () => {
       TestComponent = createTestComponent(useWindowSize);
     });
 
-    it('subscribe is called when mounting the component', () => {
+    it('subscribe and dispatch are called when mounting the component', () => {
       shallowMount(TestComponent);
       expect(mocks.subscribe).toBeCalledTimes(1);
+      expect(mocks.dispatch).toBeCalledTimes(1);
     });
 
-    it('subscribe is called only once when multiple components are mounted', () => {
+    it('subscribe and dispatch are called only once when multiple components are mounted', () => {
       shallowMount(TestComponent);
       shallowMount(TestComponent);
       expect(mocks.subscribe).toBeCalledTimes(1);
+      expect(mocks.dispatch).toBeCalledTimes(1);
     });
 
     it('unsubscribe is called when unmounting the component', () => {
