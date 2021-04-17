@@ -23,7 +23,7 @@ export const createUseWindowSize = (getSubject: () => WindowResizeSubject) => {
 
   return () => {
     if (count === 0) {
-      subject.subscribe();
+      subject.subscribe().dispatch();
     }
     increment();
 
