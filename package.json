@@ -22,7 +22,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "window-resize-subject": "^1.4.4"
+    "window-resize-subject": "^1.5.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.7",
