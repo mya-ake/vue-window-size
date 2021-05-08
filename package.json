@@ -22,6 +22,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "vue-demi": "^0.9.0",
     "window-resize-subject": "^1.5.0"
   },
   "devDependencies": {
@@ -45,7 +46,8 @@
     "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
-    "vue": ">=3.0.0"
+    "vue": "^2.6.0 || >=3.0.0",
+    "@vue/composition-api": "^1.0.0-beta.14"
   },
   "files": [
     "dist",
