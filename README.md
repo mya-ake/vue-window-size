@@ -37,9 +37,9 @@ And requires Vue.js v2.6 or higher.
 > note: v1.1.0 or later is for vue3 only
 
 ```bash
-$ yarn add vue-window-size@1.0.4 @vue/composition-api
+$ yarn add vue-window-size@1.0 @vue/composition-api
 // or
-$ npm i vue-window-size@1.0.4 @vue/composition-api
+$ npm i vue-window-size@1.0 @vue/composition-api
 ```
 
 ## Usage
