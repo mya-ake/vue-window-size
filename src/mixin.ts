@@ -1,4 +1,4 @@
-import { reactive } from 'vue';
+import { reactive } from 'vue-demi';
 import { createInitailSize } from './shared';
 import type {
   WindowResizeObserver,

@@ -1,4 +1,4 @@
-import { reactive, computed, onUnmounted } from 'vue';
+import { reactive, computed, onUnmounted } from 'vue-demi';
 import { createInitailSize } from './shared';
 import type {
   WindowResizeSubject,

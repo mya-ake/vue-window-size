@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue-demi';
 import { useWindowSize } from '~/index';
 
 export default defineComponent({
