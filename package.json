@@ -27,7 +27,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.7",
     "@vue/test-utils": "^2.0.0-beta.5",
-    "husky": "^6.0.0",
+    "husky": "^7.0.0",
     "jest": "^26.2.1",
     "lint-staged": "^11.0.0",
     "np": "^7.0.0",
