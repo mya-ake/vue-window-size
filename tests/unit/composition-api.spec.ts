@@ -23,11 +23,11 @@ const createTestComponent = (
   });
 
 const createSubject = (): WindowResizeSubject =>
-  (({
+  ({
     addObserver: mocks.addObserver,
     subscribe: mocks.subscribe,
     unsubscribe: mocks.unsubscribe,
-  } as unknown) as WindowResizeSubject);
+  } as unknown as WindowResizeSubject);
 
 describe('composition api', () => {
   beforeEach(() => {
@@ -73,14 +73,14 @@ describe('composition api', () => {
 
     it('unsubscribe is called when unmounting the component', () => {
       const wrapper = shallowMount(TestComponent);
-      wrapper.unmount();
+      wrapper.destroy();
       expect(mocks.unsubscribe).toBeCalledTimes(1);
     });
 
     it('unsubscribe is not called when at least one component is mounted', () => {
       const wrapper = shallowMount(TestComponent);
       shallowMount(TestComponent);
-      wrapper.unmount();
+      wrapper.destroy();
       expect(mocks.unsubscribe).not.toBeCalled();
     });
   });

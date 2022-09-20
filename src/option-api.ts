@@ -29,7 +29,7 @@ export const VueWindowSizePlugin = { install };
 
 /** types */
 // vue 3
-declare module '@vue/runtime-core' {
+declare module 'vue/types/vue' {
   export interface ComponentCustomProperties {
     $windowWidth: number;
     $windowHeight: number;
