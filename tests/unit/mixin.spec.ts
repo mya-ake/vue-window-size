@@ -9,10 +9,10 @@ const mocks = {
 mocks.addObserver.mockReturnValue(mocks);
 
 const createSubject = (): WindowResizeSubject =>
-  (({
+  ({
     addObserver: mocks.addObserver,
     subscribe: mocks.subscribe,
-  } as unknown) as WindowResizeSubject);
+  } as unknown as WindowResizeSubject);
 
 describe('mixin', () => {
   beforeEach(() => {
