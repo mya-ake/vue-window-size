@@ -22,12 +22,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue-demi": "^0.9.0",
     "window-resize-subject": "^1.5.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.7",
-    "@vue/test-utils": "^2.0.0-beta.5",
+    "@vue/test-utils": "^1.3.0",
     "husky": "^6.0.0",
     "jest": "^26.2.1",
     "lint-staged": "^11.0.0",
@@ -41,7 +40,7 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-jest": "^26.1.4",
     "typescript": "^4.0.2",
-    "vue": "^3.0.0",
+    "vue": "^2.7.10",
     "vue-jest": "^3.0.6",
     "vue-template-compiler": "^2.6.11"
   },

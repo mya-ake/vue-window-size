@@ -26,7 +26,7 @@ declare function install(
 declare const VueWindowSizePlugin: {
   install: typeof install;
 };
-declare module '@vue/runtime-core' {
+declare module 'vue/types/vue' {
   interface ComponentCustomProperties {
     $windowWidth: number;
     $windowHeight: number;

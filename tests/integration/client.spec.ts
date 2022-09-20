@@ -1,12 +1,12 @@
-import { shallowMount } from '@vue/test-utils';
+import { createLocalVue, shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 
-import { VueWindowSizePlugin, vueWindowSizeMixin } from '~/option-api';
+import { vueWindowSizeMixin, VueWindowSizePlugin } from '~/option-api';
 import OptionComponent from '~fixtures/OptionComponent';
 import CompositionComponent from '~fixtures/CompositionComponent';
 import { resizeWindow } from '~fixtures/shared';
 
-declare module '@vue/runtime-core' {
+declare module 'vue/types/vue' {
   export interface ComponentCustomProperties {
     windowWidth: number;
     windowHeight: number;
@@ -20,6 +20,9 @@ const WINDOW_SIZE = {
   HEIGHT: 800,
 };
 
+const localVue = createLocalVue();
+localVue.use(VueWindowSizePlugin);
+
 beforeEach(() => {
   resizeWindow(WINDOW_SIZE.WIDTH, WINDOW_SIZE.HEIGHT);
   jest.runAllTimers();
@@ -28,10 +31,8 @@ beforeEach(() => {
 describe('Plugin', () => {
   describe('mounted', () => {
     it('has property', () => {
-      const wrapper = shallowMount(OptionComponent, {
-        global: {
-          plugins: [VueWindowSizePlugin],
-        },
+      const wrapper = shallowMount(OptionComponent as any, {
+        localVue,
       });
 
       expect(wrapper.vm.$windowWidth).toBe(WINDOW_SIZE.WIDTH);
@@ -39,10 +40,8 @@ describe('Plugin', () => {
     });
 
     it('shown values', () => {
-      const wrapper = shallowMount(OptionComponent, {
-        global: {
-          plugins: [VueWindowSizePlugin],
-        },
+      const wrapper = shallowMount(OptionComponent as any, {
+        localVue,
       });
 
       expect(wrapper.get('#width').text()).toBe(String(WINDOW_SIZE.WIDTH));
@@ -52,10 +51,8 @@ describe('Plugin', () => {
 
   describe('resize event', () => {
     it('reactivity', async () => {
-      const wrapper = shallowMount(OptionComponent, {
-        global: {
-          plugins: [VueWindowSizePlugin],
-        },
+      const wrapper = shallowMount(OptionComponent as any, {
+        localVue,
       });
 
       resizeWindow(400, 300);
@@ -70,10 +67,8 @@ describe('Plugin', () => {
 describe('Mixin', () => {
   describe('mounted', () => {
     it('has property', () => {
-      const wrapper = shallowMount(OptionComponent, {
-        global: {
-          mixins: [vueWindowSizeMixin()],
-        },
+      const wrapper = shallowMount(OptionComponent as any, {
+        localVue,
       });
 
       expect(wrapper.vm.$windowWidth).toBe(WINDOW_SIZE.WIDTH);
@@ -81,10 +76,8 @@ describe('Mixin', () => {
     });
 
     it('shown values', () => {
-      const wrapper = shallowMount(OptionComponent, {
-        global: {
-          mixins: [vueWindowSizeMixin()],
-        },
+      const wrapper = shallowMount(OptionComponent as any, {
+        localVue,
       });
 
       expect(wrapper.get('#width').text()).toBe(String(WINDOW_SIZE.WIDTH));
@@ -94,10 +87,8 @@ describe('Mixin', () => {
 
   describe('resize event', () => {
     it('reactivity', async () => {
-      const wrapper = shallowMount(OptionComponent, {
-        global: {
-          plugins: [VueWindowSizePlugin],
-        },
+      const wrapper = shallowMount(OptionComponent as any, {
+        localVue,
       });
 
       resizeWindow(400, 300);

@@ -1,4 +1,4 @@
-import * as vue from 'vue-demi';
+import * as vue from 'vue';
 
 declare const useWindowSize: () => {
   width: vue.ComputedRef<number>;
