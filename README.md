@@ -30,16 +30,29 @@ $ npm i vue-window-size@0.6.2
 
 ---
 
-You can install v1 using the following command.  
-When using with vue-window-size v1 it depends on the [@vue/composition-api](https://github.com/vuejs/composition-api).
-And requires Vue.js v2.6 or higher.
+You can install v1 using the following command.
 
 > note: v1.1.0 or later is for vue3 only
 
+#### Vue.js v2.6.x
+
+When using with vue-window-size v1.0.6 it depends on the [@vue/composition-api](https://github.com/vuejs/composition-api).
+And requires Vue.js v2.6.
+
 ```bash
-$ yarn add vue-window-size@1.0.x @vue/composition-api
+$ yarn add vue-window-size@1.0.6 @vue/composition-api
 // or
-$ npm i vue-window-size@1.0.x @vue/composition-api
+$ npm i vue-window-size@1.0.6 @vue/composition-api
+```
+
+#### Vue.js v2.7.x
+
+For Vue.js v2.7, please use vue-window-size v1.0.8 or higher.
+
+```bash
+$ yarn add vue-window-size@1.0.x
+// or
+$ npm i vue-window-size@1.0.x
 ```
 
 ## Usage
