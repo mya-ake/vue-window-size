@@ -24,11 +24,11 @@ const createTestComponent = (
   });
 
 const createSubject = (): WindowResizeSubject =>
-  (({
+  ({
     addObserver: mocks.addObserver,
     subscribe: mocks.subscribe,
     unsubscribe: mocks.unsubscribe,
-  } as unknown) as WindowResizeSubject);
+  } as unknown as WindowResizeSubject);
 
 describe('composition api', () => {
   beforeEach(() => {

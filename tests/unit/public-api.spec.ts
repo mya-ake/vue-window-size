@@ -9,11 +9,11 @@ const mocks = {
 };
 
 const createSubject = (): WindowResizeSubject =>
-  (({
+  ({
     setDelay: mocks.setDelay,
     subscribe: mocks.subscribe,
     unsubscribe: mocks.unsubscribe,
-  } as unknown) as WindowResizeSubject);
+  } as unknown as WindowResizeSubject);
 
 describe('public API', () => {
   let api: ReturnType<typeof createPublicAPI>;
