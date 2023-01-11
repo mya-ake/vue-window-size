@@ -1,10 +1,11 @@
+import { describe, it, beforeEach, expect, vi } from 'vitest';
 import { createPublicAPI } from '~/public-api';
 import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {
-  setDelay: jest.fn(),
-  subscribe: jest.fn(),
-  unsubscribe: jest.fn(),
+  setDelay: vi.fn(),
+  subscribe: vi.fn(),
+  unsubscribe: vi.fn(),
 };
 
 const createSubject = (): WindowResizeSubject =>
@@ -17,7 +18,7 @@ const createSubject = (): WindowResizeSubject =>
 describe('public API', () => {
   let api: ReturnType<typeof createPublicAPI>;
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
     api = createPublicAPI(createSubject);
   });
 

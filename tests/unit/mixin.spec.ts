@@ -1,10 +1,11 @@
+import { describe, it, beforeEach, expect, vi } from 'vitest';
 import { createMixin } from '~/mixin';
 import { getWindowWidth, getWindowHeight } from '~fixtures/shared';
 import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {
-  addObserver: jest.fn(),
-  subscribe: jest.fn(),
+  addObserver: vi.fn(),
+  subscribe: vi.fn(),
 };
 mocks.addObserver.mockReturnValue(mocks);
 
@@ -16,7 +17,7 @@ const createSubject = (): WindowResizeSubject =>
 
 describe('mixin', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('createMixin', () => {

@@ -34,7 +34,9 @@ jobs:
         run: yarn install --immutable
       - name: Check format
         run: yarn format:check
-      - name: Test
-        run: yarn test
+      - name: Unit Test
+        run: yarn test:unit
+      - name: Integration Test
+        run: yarn test:integration
       - name: Build
         run: yarn build

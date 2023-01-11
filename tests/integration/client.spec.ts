@@ -1,7 +1,8 @@
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 
-import { VueWindowSizePlugin, vueWindowSizeMixin } from '~/option-api';
+import { vueWindowSizeMixin, VueWindowSizePlugin } from '~/option-api';
 import OptionComponent from '~fixtures/OptionComponent';
 import CompositionComponent from '~fixtures/CompositionComponent';
 import { resizeWindow } from '~fixtures/shared';
@@ -13,7 +14,7 @@ declare module '@vue/runtime-core' {
   }
 }
 
-jest.useFakeTimers();
+vi.useFakeTimers();
 
 const WINDOW_SIZE = {
   WIDTH: 600,
@@ -22,7 +23,7 @@ const WINDOW_SIZE = {
 
 beforeEach(() => {
   resizeWindow(WINDOW_SIZE.WIDTH, WINDOW_SIZE.HEIGHT);
-  jest.runAllTimers();
+  vi.runAllTimers();
 });
 
 describe('Plugin', () => {
@@ -59,7 +60,7 @@ describe('Plugin', () => {
       });
 
       resizeWindow(400, 300);
-      jest.runAllTimers();
+      vi.runAllTimers();
       await nextTick();
       expect(wrapper.find('#width').text()).toBe('400');
       expect(wrapper.find('#height').text()).toBe('300');
@@ -101,7 +102,7 @@ describe('Mixin', () => {
       });
 
       resizeWindow(400, 300);
-      jest.runAllTimers();
+      vi.runAllTimers();
       await nextTick();
       expect(wrapper.find('#width').text()).toBe('400');
       expect(wrapper.find('#height').text()).toBe('300');
@@ -124,7 +125,7 @@ describe('Composition API', () => {
       const wrapper = shallowMount(CompositionComponent);
 
       resizeWindow(400, 300);
-      jest.runAllTimers();
+      vi.runAllTimers();
       await nextTick();
       expect(wrapper.find('#width').text()).toBe('400');
       expect(wrapper.find('#height').text()).toBe('300');
