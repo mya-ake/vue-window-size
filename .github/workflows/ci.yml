@@ -35,8 +35,8 @@ jobs:
       - name: Check format
         run: yarn format:check
       - name: Unit Test
-        run: yarn test:unit
+        run: yarn workspace vue-window-size test:unit
       - name: Integration Test
-        run: yarn test:integration
+        run: yarn workspace vue-window-size test:integration
       - name: Build
-        run: yarn build
+        run: yarn workspace vue-window-size build
