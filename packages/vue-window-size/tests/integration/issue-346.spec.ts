@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 import CompositionComponent from '~fixtures/CompositionComponent';
@@ -7,7 +8,7 @@ import { resizeWindow } from '~fixtures/shared';
 // Resizing before component mounting was not reflected in the component.
 // This separates the test files because the window size of the first import is important.
 
-jest.useFakeTimers();
+vi.useFakeTimers();
 
 it('issue #346', async () => {
   // resize
@@ -16,7 +17,7 @@ it('issue #346', async () => {
   // mount
   const wrapper = shallowMount(CompositionComponent);
 
-  jest.runAllTimers();
+  vi.runAllTimers();
   await nextTick();
   expect(wrapper.find('#width').text()).toBe('400');
   expect(wrapper.find('#height').text()).toBe('300');

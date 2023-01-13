@@ -1,0 +1,67 @@
+{
+  "name": "vue-window-size",
+  "version": "1.1.2",
+  "description": "Reactivity window size for Vue.js.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": "./dist/index.cjs"
+    },
+    "./option-api": {
+      "import": {
+        "default": "./dist/option-api.js",
+        "types": "./dist/option-api.d.ts"
+      },
+      "require": "./dist/option-api.cjs"
+    }
+  },
+  "repository": "https://github.com/mya-ake/vue-window-size.git",
+  "bugs": {
+    "url": "https://github.com/mya-ake/vue-window-size/issues"
+  },
+  "author": "mya-ake <tatsuya@neko-note.help>",
+  "license": "MIT",
+  "packageManager": "yarn@3.3.1",
+  "scripts": {
+    "build": "tsup",
+    "test:unit": "vitest --dir tests/unit --run",
+    "test:integration": "vitest --dir tests/integration --run",
+    "release": "np"
+  },
+  "dependencies": {
+    "window-resize-subject": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/compiler-dom": "^3.2.45",
+    "@vue/runtime-core": "^3.2.45",
+    "@vue/test-utils": "^2.2.7",
+    "happy-dom": "^8.1.3",
+    "np": "^7.6.3",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-tsconfig-paths": "^4.0.3",
+    "vitest": "^0.27.1",
+    "vue": "^3.2.45"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "files": [
+    "dist",
+    "option-api.d.ts"
+  ],
+  "keywords": [
+    "vue.js",
+    "window size"
+  ]
+}

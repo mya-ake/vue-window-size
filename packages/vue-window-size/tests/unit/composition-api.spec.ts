@@ -1,13 +1,14 @@
+import { describe, it, beforeEach, expect, vi } from 'vitest';
 import { defineComponent } from 'vue';
 import { shallowMount } from '@vue/test-utils';
 import { createUseWindowSize } from '~/composition-api';
 import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {
-  addObserver: jest.fn(),
-  subscribe: jest.fn(),
-  unsubscribe: jest.fn(),
-  dispatch: jest.fn(),
+  addObserver: vi.fn(),
+  subscribe: vi.fn(),
+  unsubscribe: vi.fn(),
+  dispatch: vi.fn(),
 };
 mocks.addObserver.mockReturnValue(mocks);
 mocks.subscribe.mockReturnValue(mocks);
@@ -23,15 +24,15 @@ const createTestComponent = (
   });
 
 const createSubject = (): WindowResizeSubject =>
-  (({
+  ({
     addObserver: mocks.addObserver,
     subscribe: mocks.subscribe,
     unsubscribe: mocks.unsubscribe,
-  } as unknown) as WindowResizeSubject);
+  } as unknown as WindowResizeSubject);
 
 describe('composition api', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('createUseWindowSize', () => {

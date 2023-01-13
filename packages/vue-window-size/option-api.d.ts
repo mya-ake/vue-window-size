@@ -1,11 +1,11 @@
-declare type Mixin = {
+type Mixin = {
   computed: {
     $windowWidth: () => number;
     $windowHeight: () => number;
   };
 };
 
-declare type Config = {
+type Config = {
   delay?: number;
 };
 
@@ -26,6 +26,7 @@ declare function install(
 declare const VueWindowSizePlugin: {
   install: typeof install;
 };
+/** types */
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     $windowWidth: number;
@@ -38,7 +39,7 @@ declare module 'vue/types/vue' {
     $windowHeight: number;
   }
 }
-declare type VueWindowSizeOptionApiConfig = Config;
+type VueWindowSizeOptionApiConfig = Config;
 
 export {
   VueWindowSizeOptionApiConfig,

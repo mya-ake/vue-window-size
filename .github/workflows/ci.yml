@@ -2,6 +2,7 @@ name: CI
 
 on:
   push:
+    branches: [master]
   pull_request:
     branches: [master]
 
@@ -10,16 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 16.15.1
+          node-version-file: '.node-version'
+      - name: Enable corepack
+        run: corepack enable
+      - name: Setup Yarn
+        run: corepack prepare yarn@3.3.1 --activate
+      - name: Get yarn cache direcoty path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+      - name: Yarn Cache
+        id: yarn-cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
       - name: Intall
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Check format
         run: yarn format:check
-      - name: Test
-        run: yarn test
+      - name: Unit Test
+        run: yarn workspace vue-window-size test:unit
+      - name: Integration Test
+        run: yarn workspace vue-window-size test:integration
       - name: Build
-        run: yarn build
+        run: yarn workspace vue-window-size build
