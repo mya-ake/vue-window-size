@@ -8,8 +8,18 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
       "require": "./dist/index.cjs"
+    },
+    "./option-api": {
+      "import": {
+        "default": "./dist/option-api.js",
+        "types": "./dist/option-api.d.ts"
+      },
+      "require": "./dist/option-api.cjs"
     }
   },
   "repository": "https://github.com/mya-ake/vue-window-size.git",
