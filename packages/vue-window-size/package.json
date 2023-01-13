@@ -55,5 +55,13 @@
   },
   "peerDependencies": {
     "vue": ">=3.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "option-api.d.ts"
+  ],
+  "keywords": [
+    "vue.js",
+    "window size"
+  ]
 }
