@@ -1,10 +1,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { vueWindowSizeMixin } from 'vue-window-size/option-api'
+import { vueWindowSizeMixin } from 'vue-window-size/option-api';
 
 export default defineComponent({
-  mixins: [vueWindowSizeMixin()]
-})
+  mixins: [vueWindowSizeMixin()],
+});
 </script>
 
 <template>
