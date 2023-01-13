@@ -63,5 +63,10 @@
   "keywords": [
     "vue.js",
     "window size"
-  ]
+  ],
+  "publishConfig": {
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "registry": "https://npm.pkg.github.com"
+  }
 }
