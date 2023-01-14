@@ -1626,12 +1626,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^7.0.0":
-  version: 7.0.1
-  resolution: "husky@npm:7.0.1"
+"husky@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "husky@npm:8.0.3"
   bin:
     husky: lib/bin.js
-  checksum: b2ea1460f1126ed7161779b1b89f7ec8ae66fb6723e0e9fd47c522f454f4a2ea7e31a21d6ce2eb5d32e9837d232fb0245783425c109df0adab53668f8c8d8fc8
+  checksum: 837bc7e4413e58c1f2946d38fb050f5d7324c6f16b0fd66411ffce5703b294bd21429e8ba58711cd331951ee86ed529c5be4f76805959ff668a337dbfa82a1b0
   languageName: node
   linkType: hard
 
@@ -3326,7 +3326,7 @@ __metadata:
     "@types/node": ^18.11.18
     "@vue/compiler-dom": ^3.2.45
     happy-dom: ^8.1.4
-    husky: ^7.0.0
+    husky: ^8.0.3
     lint-staged: ^13.1.0
     prettier: ^2.8.2
     typescript: ^4.9.4
