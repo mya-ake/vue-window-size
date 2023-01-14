@@ -7,7 +7,7 @@ import type { Config } from '~shared/config';
 export const vueWindowSizeAPI = createPublicAPI(getSubject);
 
 // plugin
-function install(app: any, { delay = 33 } = {}) {
+function install(app: any, { delay = 33 }: Config = {}) {
   const mixin = createMixin(getSubject);
   getSubject().setDelay(delay);
   app.mixin({
@@ -18,7 +18,6 @@ function install(app: any, { delay = 33 } = {}) {
 export const VueWindowSizePlugin = { install };
 
 /** types */
-// vue 3
 declare module '@vue/runtime-core' {
   export interface ComponentCustomProperties {
     $windowWidth: number;
