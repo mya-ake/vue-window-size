@@ -3,25 +3,6 @@
   "version": "1.0.0",
   "description": "Reactivity window size for Vue.js.",
   "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": {
-        "default": "./dist/index.js",
-        "types": "./dist/index.d.ts"
-      },
-      "require": "./dist/index.cjs"
-    },
-    "./option-api": {
-      "import": {
-        "default": "./dist/option-api.js",
-        "types": "./dist/option-api.d.ts"
-      },
-      "require": "./dist/option-api.cjs"
-    }
-  },
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
     "url": "https://github.com/mya-ake/vue-window-size/issues"
@@ -30,10 +11,7 @@
   "license": "MIT",
   "packageManager": "yarn@3.3.1",
   "scripts": {
-    "build": "tsup",
-    "test:unit": "vitest --dir tests/unit --run",
-    "test:integration": "vitest --dir tests/integration --run",
-    "release": "np"
+    "test:unit": "vitest --dir src --run"
   },
   "dependencies": {
     "window-resize-subject": "^1.5.0"

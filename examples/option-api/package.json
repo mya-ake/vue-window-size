@@ -1,5 +1,5 @@
 {
-  "name": "option-api",
+  "name": "mixin-example",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.2.45",
-    "vue-window-size": "workspace:*"
+    "vue-window-size-mixin": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useWindowSize } from 'vue-window-size';
+import { useWindowSize } from 'vue-window-size-composition-api';
 
 const { width: windowWidth, height: windowHeight } = useWindowSize();
 </script>

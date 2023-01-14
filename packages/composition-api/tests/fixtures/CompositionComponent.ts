@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import { useWindowSize } from '~/index';
+import { useWindowSize } from '../../src';
 
 export default defineComponent({
   template: `

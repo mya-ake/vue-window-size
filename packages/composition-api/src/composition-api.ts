@@ -1,5 +1,5 @@
 import { reactive, computed, onUnmounted } from 'vue';
-import { createInitailSize } from './shared';
+import { createInitailSize } from '~shared/shared';
 import type {
   WindowResizeSubject,
   WindowResizeObserver,

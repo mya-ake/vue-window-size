@@ -1,7 +1,7 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { expect, it, vi } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
 import { nextTick } from 'vue';
-import CompositionComponent from '~fixtures/CompositionComponent';
+import CompositionComponent from './fixtures/CompositionComponent';
 import { resizeWindow } from '~fixtures/shared';
 
 // https://github.com/mya-ake/vue-window-size/issues/346

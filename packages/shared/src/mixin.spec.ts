@@ -1,6 +1,6 @@
 import { describe, it, beforeEach, expect, vi } from 'vitest';
-import { createMixin } from '~/mixin';
-import { getWindowWidth, getWindowHeight } from '~fixtures/shared';
+import { createMixin } from './mixin';
+import { getWindowWidth, getWindowHeight } from '../fixtures/shared';
 import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {

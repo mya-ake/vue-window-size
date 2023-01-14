@@ -36,8 +36,8 @@ jobs:
       - name: Check format
         run: yarn format:check
       - name: Unit Test
-        run: yarn workspace vue-window-size test:unit
+        run: yarn nx run-many --target=test:unit
       - name: Integration Test
-        run: yarn workspace vue-window-size test:integration
+        run: yarn nx run-many --target=test:integration
       - name: Build
-        run: yarn workspace vue-window-size build
+        run: yarn nx run-many --target=build

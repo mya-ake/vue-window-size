@@ -3,7 +3,7 @@
   "compilerOptions": {
     "paths": {
       "~/*": ["./src/*"],
-      "~fixtures/*": ["./tests/fixtures/*"]
+      "~fixtures/*": ["fixtures/*"]
     }
   },
   "include": [
@@ -11,7 +11,10 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts"
+    "tests/**/*.ts",
+    "../composition-api/tests/issue-346.spec.ts",
+    "../composition-api/tests/issue-346.spec.ts",
+    "../option-api/src/option-api.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,5 +1,5 @@
 import { describe, it, beforeEach, expect, vi } from 'vitest';
-import { createPublicAPI } from '~/public-api';
+import { createPublicAPI } from './public-api';
 import type { WindowResizeSubject } from 'window-resize-subject';
 
 const mocks = {
