@@ -1622,9 +1622,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^8.1.3":
-  version: 8.1.3
-  resolution: "happy-dom@npm:8.1.3"
+"happy-dom@npm:^8.1.4":
+  version: 8.1.4
+  resolution: "happy-dom@npm:8.1.4"
   dependencies:
     css.escape: ^1.5.1
     he: ^1.2.0
@@ -1632,7 +1632,7 @@ __metadata:
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: aba08125f4c972872bc2432f69e55720bb03134f09db4efa23e2d27e13253bb380500ed0550bec5d3a253af8400d7d0f8aa867df29315d0c41b223065b52e3e2
+  checksum: cebb4585f9054dae410ea27a742328bc0a42981746d38ff0fd8521a259422a1c5025e36f12bd9e25c30130a63d6652a83bf949d1d5ddcfea5b2354c35ad21dae
   languageName: node
   linkType: hard
 
@@ -3437,7 +3437,7 @@ __metadata:
   dependencies:
     "@types/node": ^18.11.18
     "@vue/compiler-dom": ^3.2.45
-    happy-dom: ^8.1.3
+    happy-dom: ^8.1.4
     husky: ^7.0.0
     lint-staged: ^11.0.0
     prettier: ^2.8.2
@@ -3455,7 +3455,7 @@ __metadata:
     "@vue/compiler-dom": ^3.2.45
     "@vue/runtime-core": ^3.2.45
     "@vue/test-utils": ^2.2.7
-    happy-dom: ^8.1.3
+    happy-dom: ^8.1.4
     tsup: ^6.5.0
     typescript: ^4.9.4
     vite: ^4.0.4
