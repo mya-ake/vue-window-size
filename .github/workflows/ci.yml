@@ -38,8 +38,8 @@ jobs:
       - name: Check format
         run: yarn format:check
       - name: Unit Test
-        run: yarn nx affected --target=test:unit
+        run: yarn nx run-many --target=test:unit
       - name: Integration Test
-        run: yarn nx affected --target=test:integration
+        run: yarn nx run-many --target=test:integration
       - name: Build
-        run: yarn nx affected --target=build
+        run: yarn nx run-many --target=build
