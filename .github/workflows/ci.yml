@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -36,8 +38,8 @@ jobs:
       - name: Check format
         run: yarn format:check
       - name: Unit Test
-        run: yarn nx run-many --target=test:unit
+        run: yarn nx affected --target=test:unit
       - name: Integration Test
-        run: yarn nx run-many --target=test:integration
+        run: yarn nx affected --target=test:integration
       - name: Build
-        run: yarn nx run-many --target=build
+        run: yarn nx affected --target=build
