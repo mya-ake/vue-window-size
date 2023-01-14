@@ -1,6 +1,8 @@
 {
-  "name": "vue-window-size-root",
-  "private": true,
+  "name": "vue-window-size",
+  "version": "2.0.0-beta",
+  "description": "Reactivity window size for Vue.js.",
+  "type": "module",
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
     "url": "https://github.com/mya-ake/vue-window-size/issues"
