@@ -1,26 +1,26 @@
 {
   "name": "vue-window-size",
-  "version": "2.0.0-beta.6",
+  "version": "2.0.0-beta.7",
   "description": "Reactivity window size for Vue.js.",
   "type": "module",
-  "main": "./libs/composition-api/dist/index.js",
-  "module": "./libs/composition-api/dist/index.mjs",
-  "types": "./libs/composition-api/dist/index.d.js",
+  "main": "./composition-api/dist/index.js",
+  "module": "./composition-api/dist/index.mjs",
+  "types": "./composition-api/dist/index.d.js",
   "exports": {
     ".": {
-      "import": "./libs/composition-api/dist/index.mjs",
-      "types": "./libs/composition-api/dist/index.d.js",
-      "require": "./libs/composition-api/dist/index.js"
+      "import": "./composition-api/dist/index.mjs",
+      "types": "./composition-api/dist/index.d.js",
+      "require": "./composition-api/dist/index.js"
     },
     "./plugin": {
-      "import": "./libs/plugin/dist/index.mjs",
-      "types": "./libs/plugin/dist/index.d.js",
-      "require": "./libs/plugin/dist/index.js"
+      "import": "./plugin/dist/index.mjs",
+      "types": "./plugin/dist/index.d.js",
+      "require": "./plugin/dist/index.js"
     },
     "./mixin": {
-      "import": "./libs/mixin/dist/index.mjs",
-      "types": "./libs/mixin/dist/index.d.js",
-      "require": "./libs/mixin/dist/index.js"
+      "import": "./mixin/dist/index.mjs",
+      "types": "./mixin/dist/index.d.js",
+      "require": "./mixin/dist/index.js"
     },
     "./package.json": "./package.json",
     "./plugin/package.json": "./libs/plugin/package.json",
@@ -56,7 +56,9 @@
     "vue": ">=3.0.0"
   },
   "files": [
-    "libs"
+    "composition-api",
+    "plugin",
+    "mixin"
   ],
   "keywords": [
     "vue.js",

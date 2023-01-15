@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
 dist
-libs
 
 .yarn/*
 !.yarn/patches
@@ -29,3 +28,8 @@ yarn-error.log*
 *.sw*
 
 coverage
+
+# packages
+/composition-api/*
+/plugin/*
+/mixin/*
