@@ -1,8 +1,31 @@
 {
   "name": "vue-window-size",
-  "version": "2.0.0-beta",
+  "version": "2.0.0-beta.0",
   "description": "Reactivity window size for Vue.js.",
   "type": "module",
+  "main": "./packages/composition-api/dist/index.js",
+  "module": "./packages/composition-api/dist/index.mjs",
+  "types": "./packages/composition-api/dist/index.d.js",
+  "exports": {
+    ".": {
+      "import": "./packages/composition-api/dist/index.mjs",
+      "types": "./packages/composition-api/dist/index.d.js",
+      "require": "./packages/composition-api/dist/index.js"
+    },
+    "./plugin": {
+      "import": "./packages/plugin/dist/index.mjs",
+      "types": "./packages/plugin/dist/index.d.js",
+      "require": "./packages/plugin/dist/index.js"
+    },
+    "./mixin": {
+      "import": "./packages/mixin/dist/index.mjs",
+      "types": "./packages/mixin/dist/index.d.js",
+      "require": "./packages/mixin/dist/index.js"
+    },
+    "./package.json": "./package.json",
+    "./plugin/package.json": "./packages/plugin/package.json",
+    "./mixin/package.json": "./packages/mixin/package.json"
+  },
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
     "url": "https://github.com/mya-ake/vue-window-size/issues"
@@ -26,6 +49,18 @@
     "prettier": "^2.8.2",
     "typescript": "^4.9.4"
   },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "files": [
+    "packages/composition-api/dist",
+    "packages/plugin/dist",
+    "packages/mixin/dist"
+  ],
+  "keywords": [
+    "vue.js",
+    "window size"
+  ],
   "lint-staged": {
     "*.{js,ts,json,md,yml}": "prettier --write"
   },
