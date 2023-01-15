@@ -1,6 +1,6 @@
 {
   "name": "vue-window-size",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.0-beta.1",
   "description": "Reactivity window size for Vue.js.",
   "type": "module",
   "main": "./packages/composition-api/dist/index.js",
@@ -56,9 +56,9 @@
     "vue": ">=3.0.0"
   },
   "files": [
-    "packages/composition-api/dist",
-    "packages/plugin/dist",
-    "packages/mixin/dist"
+    "packages/composition-api/dist/*",
+    "packages/plugin/dist/*",
+    "packages/mixin/dist/*"
   ],
   "keywords": [
     "vue.js",
