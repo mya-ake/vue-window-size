@@ -36,6 +36,9 @@
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "build": "nx run-many --target=build",
+    "test:unit": "nx run-many --target=test:unit",
+    "test:integration": "nx run-many --target=test:integration",
     "prepare": "husky install"
   },
   "devDependencies": {
