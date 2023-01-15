@@ -2,7 +2,7 @@ import { describe, it, beforeEach, expect, vi } from 'vitest';
 import { defineComponent } from 'vue';
 import { shallowMount } from '@vue/test-utils';
 import { createUseWindowSize } from './composition-api';
-import type { WindowResizeSubject } from 'window-resize-subject';
+import type { WindowResizeSubject } from '~shared/subject';
 
 const mocks = {
   addObserver: vi.fn(),

@@ -1,4 +1,4 @@
-import type { WindowResizeSubject } from 'window-resize-subject';
+import type { WindowResizeSubject } from './subject';
 import type { Config } from './config';
 
 export const createPublicAPI = (getSubject: () => WindowResizeSubject) => {

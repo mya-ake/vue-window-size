@@ -1,6 +1,6 @@
 import { describe, it, beforeEach, expect, vi } from 'vitest';
 import { createPublicAPI } from './public-api';
-import type { WindowResizeSubject } from 'window-resize-subject';
+import type { WindowResizeSubject } from './subject';
 
 const mocks = {
   setDelay: vi.fn(),

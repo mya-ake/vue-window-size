@@ -3,7 +3,7 @@ import { createInitailSize } from '~shared/shared';
 import type {
   WindowResizeSubject,
   WindowResizeObserver,
-} from 'window-resize-subject';
+} from '~shared/subject';
 
 export const createUseWindowSize = (getSubject: () => WindowResizeSubject) => {
   let count = 0;

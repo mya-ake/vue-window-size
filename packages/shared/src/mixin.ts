@@ -1,9 +1,6 @@
 import { reactive } from 'vue';
 import { createInitailSize } from './shared';
-import type {
-  WindowResizeObserver,
-  WindowResizeSubject,
-} from 'window-resize-subject';
+import type { WindowResizeObserver, WindowResizeSubject } from './subject';
 
 export type Mixin = {
   computed: {

@@ -1,4 +1,8 @@
-import { WindowResizeSubject } from 'window-resize-subject';
+import { WindowResizeSubject } from './WindowResizeSubject';
+export type {
+  WindowResizeSubject,
+  WindowResizeObserver,
+} from './WindowResizeSubject';
 
 // subject
 let subject: WindowResizeSubject;
