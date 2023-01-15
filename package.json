@@ -1,30 +1,30 @@
 {
   "name": "vue-window-size",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "description": "Reactivity window size for Vue.js.",
   "type": "module",
-  "main": "./packages/composition-api/dist/index.js",
-  "module": "./packages/composition-api/dist/index.mjs",
-  "types": "./packages/composition-api/dist/index.d.js",
+  "main": "./libs/composition-api/dist/index.js",
+  "module": "./libs/composition-api/dist/index.mjs",
+  "types": "./libs/composition-api/dist/index.d.js",
   "exports": {
     ".": {
-      "import": "./packages/composition-api/dist/index.mjs",
-      "types": "./packages/composition-api/dist/index.d.js",
-      "require": "./packages/composition-api/dist/index.js"
+      "import": "./libs/composition-api/dist/index.mjs",
+      "types": "./libs/composition-api/dist/index.d.js",
+      "require": "./libs/composition-api/dist/index.js"
     },
     "./plugin": {
-      "import": "./packages/plugin/dist/index.mjs",
-      "types": "./packages/plugin/dist/index.d.js",
-      "require": "./packages/plugin/dist/index.js"
+      "import": "./libs/plugin/dist/index.mjs",
+      "types": "./libs/plugin/dist/index.d.js",
+      "require": "./libs/plugin/dist/index.js"
     },
     "./mixin": {
-      "import": "./packages/mixin/dist/index.mjs",
-      "types": "./packages/mixin/dist/index.d.js",
-      "require": "./packages/mixin/dist/index.js"
+      "import": "./libs/mixin/dist/index.mjs",
+      "types": "./libs/mixin/dist/index.d.js",
+      "require": "./libs/mixin/dist/index.js"
     },
     "./package.json": "./package.json",
-    "./plugin/package.json": "./packages/plugin/package.json",
-    "./mixin/package.json": "./packages/mixin/package.json"
+    "./plugin/package.json": "./libs/plugin/package.json",
+    "./mixin/package.json": "./libs/mixin/package.json"
   },
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
