@@ -19,7 +19,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.16.4":
+"@babel/parser@npm:^7.16.4, @babel/parser@npm:^7.18.4":
   version: 7.20.7
   resolution: "@babel/parser@npm:7.20.7"
   bin:
@@ -381,6 +381,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vitejs/plugin-vue2@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@vitejs/plugin-vue2@npm:2.2.0"
+  peerDependencies:
+    vite: ^3.0.0 || ^4.0.0
+    vue: ^2.7.0-0
+  checksum: 935d695844e87232912c955f7d9f6a0170c590919d2dda1c410f078464159773c0538cc1e24ffc30ae57a6decf40cc03b0329046a6b5c6a88117a0fea428d649
+  languageName: node
+  linkType: hard
+
 "@vitejs/plugin-vue@npm:^4.0.0":
   version: 4.0.0
   resolution: "@vitejs/plugin-vue@npm:4.0.0"
@@ -474,6 +484,17 @@ __metadata:
     "@vue/compiler-core": 3.2.45
     "@vue/shared": 3.2.45
   checksum: 89115538635f0da9cce615de5488d2759256fa573976a09a049536dbb94e9b5086b46f2f11e743cf0a7b14837161b3191c67611e0493054a5d4c4b96a322c901
+  languageName: node
+  linkType: hard
+
+"@vue/compiler-sfc@npm:2.7.14":
+  version: 2.7.14
+  resolution: "@vue/compiler-sfc@npm:2.7.14"
+  dependencies:
+    "@babel/parser": ^7.18.4
+    postcss: ^8.4.14
+    source-map: ^0.6.1
+  checksum: 25e00abaecb311f1effbf539bc3e4fdeedb39d35f9c2947b2640187a047e6a7400e693fd7da1d3a98977b9078c5bf629ca47f8b9a59dc14a080c0a1e1dd06a49
   languageName: node
   linkType: hard
 
@@ -1186,6 +1207,13 @@ __metadata:
   version: 2.6.21
   resolution: "csstype@npm:2.6.21"
   checksum: 2ce8bc832375146eccdf6115a1f8565a27015b74cce197c35103b4494955e9516b246140425ad24103864076aa3e1257ac9bab25a06c8d931dd87a6428c9dccf
+  languageName: node
+  linkType: hard
+
+"csstype@npm:^3.1.0":
+  version: 3.1.1
+  resolution: "csstype@npm:3.1.1"
+  checksum: 1f7b4f5fdd955b7444b18ebdddf3f5c699159f13e9cf8ac9027ae4a60ae226aef9bbb14a6e12ca7dba3358b007cee6354b116e720262867c398de6c955ea451d
   languageName: node
   linkType: hard
 
@@ -3180,7 +3208,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.10, postcss@npm:^8.4.20":
+"postcss@npm:^8.1.10, postcss@npm:^8.4.14, postcss@npm:^8.4.20":
   version: 8.4.21
   resolution: "postcss@npm:8.4.21"
   dependencies:
@@ -4030,6 +4058,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"v2-composition-api-example@workspace:examples/v2-composition-api":
+  version: 0.0.0-use.local
+  resolution: "v2-composition-api-example@workspace:examples/v2-composition-api"
+  dependencies:
+    "@vitejs/plugin-vue2": ^2.2.0
+    typescript: ^4.9.3
+    vite: ^4.0.0
+    vue: v2.7
+    vue-tsc: ^1.0.11
+    vue-window-size-composition-api: "workspace:*"
+  languageName: unknown
+  linkType: soft
+
 "v8-compile-cache@npm:2.3.0":
   version: 2.3.0
   resolution: "v8-compile-cache@npm:2.3.0"
@@ -4203,7 +4244,7 @@ __metadata:
     vitest: ^0.27.1
     vue: ^3.2.45
   peerDependencies:
-    vue: ">=3.0.0"
+    vue: ^3.0 || ^2.7
   languageName: unknown
   linkType: soft
 
@@ -4224,7 +4265,7 @@ __metadata:
     vitest: ^0.27.1
     vue: ^3.2.45
   peerDependencies:
-    vue: ">=3.0.0"
+    vue: ^3.0 || ^2.7
   languageName: unknown
   linkType: soft
 
@@ -4245,7 +4286,7 @@ __metadata:
     vitest: ^0.27.1
     vue: ^3.2.45
   peerDependencies:
-    vue: ">=3.0.0"
+    vue: ^3.0 || ^2.7
   languageName: unknown
   linkType: soft
 
@@ -4267,7 +4308,7 @@ __metadata:
     vitest: ^0.27.1
     vue: ^3.2.45
   peerDependencies:
-    vue: ">=3.0.0"
+    vue: ^3.0 || ^2.7
   languageName: unknown
   linkType: soft
 
@@ -4285,7 +4326,7 @@ __metadata:
     prettier: ^2.8.2
     typescript: ^4.9.4
   peerDependencies:
-    vue: ">=3.0.0"
+    vue: ^3.0 || ^2.7
   languageName: unknown
   linkType: soft
 
@@ -4299,6 +4340,16 @@ __metadata:
     "@vue/server-renderer": 3.2.45
     "@vue/shared": 3.2.45
   checksum: df60ca80cb9fdce408eccd0c7a4d44720df9855c62e340448650d8048b1edd25da6f3bd99ed7efc19efbe1f3fdcec4ae8067ab10ae50be5bb363d996ad29251a
+  languageName: node
+  linkType: hard
+
+"vue@npm:v2.7":
+  version: 2.7.14
+  resolution: "vue@npm:2.7.14"
+  dependencies:
+    "@vue/compiler-sfc": 2.7.14
+    csstype: ^3.1.0
+  checksum: 8b06da67cc40870c66a30b7a6bc2874950cd4383792c371eb30497dd14fc7b41cf308b1c4517368d8f0e7ac16198c08de19236f6a79fe43f4bdbc4a1d9d4ad07
   languageName: node
   linkType: hard
 
