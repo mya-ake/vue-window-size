@@ -1,8 +1,9 @@
 {
   "name": "vue-window-size-plugin",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "packageManager": "yarn@3.3.1",
   "scripts": {
@@ -24,6 +25,6 @@
     "vue": "^3.2.45"
   },
   "peerDependencies": {
-    "vue": ">=3.0.0"
+    "vue": "^3.0 || ^2.7"
   }
 }

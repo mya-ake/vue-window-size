@@ -3,28 +3,28 @@
   "version": "2.0.0-beta.7",
   "description": "Reactivity window size for Vue.js.",
   "type": "module",
-  "main": "./composition-api/dist/index.js",
-  "module": "./composition-api/dist/index.mjs",
+  "main": "./composition-api/dist/index.cjs",
+  "module": "./composition-api/dist/index.js",
   "types": "./composition-api/dist/index.d.js",
   "exports": {
     ".": {
-      "import": "./composition-api/dist/index.mjs",
+      "import": "./composition-api/dist/index.js",
       "types": "./composition-api/dist/index.d.js",
-      "require": "./composition-api/dist/index.js"
+      "require": "./composition-api/dist/index.cjs"
     },
     "./plugin": {
-      "import": "./plugin/dist/index.mjs",
+      "import": "./plugin/dist/index.js",
       "types": "./plugin/dist/index.d.js",
-      "require": "./plugin/dist/index.js"
+      "require": "./plugin/dist/index.cjs"
     },
     "./mixin": {
-      "import": "./mixin/dist/index.mjs",
+      "import": "./mixin/dist/index.js",
       "types": "./mixin/dist/index.d.js",
-      "require": "./mixin/dist/index.js"
+      "require": "./mixin/dist/index.cjs"
     },
     "./package.json": "./package.json",
-    "./plugin/package.json": "./libs/plugin/package.json",
-    "./mixin/package.json": "./libs/mixin/package.json"
+    "./plugin/package.json": "./plugin/package.json",
+    "./mixin/package.json": "./mixin/package.json"
   },
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
@@ -53,7 +53,7 @@
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "vue": ">=3.0.0"
+    "vue": "^3.0 || ^2.7"
   },
   "files": [
     "composition-api",

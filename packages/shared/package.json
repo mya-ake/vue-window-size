@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "Reactivity window size for Vue.js.",
   "type": "module",
-  "repository": "https://github.com/mya-ake/vue-window-size.git",
-  "bugs": {
-    "url": "https://github.com/mya-ake/vue-window-size/issues"
-  },
-  "author": "mya-ake <tatsuya@neko-note.help>",
-  "license": "MIT",
   "packageManager": "yarn@3.3.1",
   "scripts": {
     "test:unit": "vitest --dir src --run"
@@ -29,14 +23,6 @@
     "vue": "^3.2.45"
   },
   "peerDependencies": {
-    "vue": ">=3.0.0"
-  },
-  "files": [
-    "dist",
-    "option-api.d.ts"
-  ],
-  "keywords": [
-    "vue.js",
-    "window size"
-  ]
+    "vue": "^3.0 || ^2.7"
+  }
 }
