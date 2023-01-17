@@ -2,15 +2,13 @@
 
 [![npm version](https://badge.fury.io/js/vue-window-size.svg)](https://badge.fury.io/js/vue-window-size)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-![CI Status](https://github.com/mya-ake/vue-window-size/workflows/Main%20Workflow/badge.svg)
+[![CI](https://github.com/mya-ake/vue-window-size/actions/workflows/ci.yml/badge.svg)](https://github.com/mya-ake/vue-window-size/actions/workflows/ci.yml)
 
-> Provides reactivity window size properties for Vue.js.
+> Provides reactivity window size properties for Vue.js. Supports Vue.js v3.x and v2.7 or higher.
 
 ## Install
 
-### for Vue v3
-
-The following command installs vue-window-size v1.
+The following command installs vue-window-size v2.
 
 ```bash
 $ yarn add vue-window-size
@@ -18,42 +16,7 @@ $ yarn add vue-window-size
 $ npm i vue-window-size
 ```
 
-### for Vue v2
-
-The following command installs vue-window-seize v0.
-
-```bash
-$ yarn add vue-window-size@0.6.2
-// or
-$ npm i vue-window-size@0.6.2
-```
-
----
-
-You can install v1 using the following command.
-
-> note: v1.1.0 or later is for vue3 only
-
-#### Vue.js v2.6.x
-
-When using with vue-window-size v1.0.6 it depends on the [@vue/composition-api](https://github.com/vuejs/composition-api).
-And requires Vue.js v2.6.
-
-```bash
-$ yarn add vue-window-size@1.0.6 @vue/composition-api
-// or
-$ npm i vue-window-size@1.0.6 @vue/composition-api
-```
-
-#### Vue.js v2.7.x
-
-For Vue.js v2.7, please use vue-window-size v1.0.8 or higher.
-
-```bash
-$ yarn add vue-window-size@1.0.x
-// or
-$ npm i vue-window-size@1.0.x
-```
+Note: For use with v2.6, see [here](https://github.com/mya-ake/vue-window-size/tree/v1.2.1#for-vue-v2).
 
 ## Usage
 
@@ -68,18 +31,12 @@ $ npm i vue-window-size@1.0.x
 
 Use with component.
 
-```JavaScript
-<template>
-  <div>
-    <p>window width: {{ windowWidth }}</p>
-    <p>window height: {{ windowHeight }}</p>
-  </div>
-</template>
-
-<script>
+```TypeScript
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { useWindowSize } from 'vue-window-size';
 
-export default {
+export default defineComponent({
   setup() {
     const { width, height } = useWindowSize();
     return {
@@ -87,8 +44,15 @@ export default {
       windowHeight: height,
     };
   },
-};
+});
 </script>
+
+<template>
+  <div>
+    <p>window width: {{ windowWidth }}</p>
+    <p>window height: {{ windowHeight }}</p>
+  </div>
+</template>
 ```
 
 > note: useWindowSize handles a Resize Event only when it is in use.
@@ -99,10 +63,10 @@ export default {
 
 Install plugin
 
-```JavaScript
+```TypeScript
 import { createApp } from 'vue';
 import App from "./App.vue";  // your App component
-import { VueWindowSizePlugin } from 'vue-window-size/option-api';
+import { VueWindowSizePlugin } from 'vue-window-size/plugin';
 
 const app = createApp(App);
 app.use(VueWindowSizePlugin);
@@ -123,21 +87,22 @@ Use with component
 
 Use with component
 
-```HTML
+```TypeScript
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { vueWindowSizeMixin } from 'vue-window-size/mixin';
+
+export default defineComponent({
+  mixins: [vueWindowSizeMixin()],
+});
+</script>
+
 <template>
   <div>
     <p>window width: {{ $windowWidth }}</p>
     <p>window height: {{ $windowHeight }}</p>
   </div>
 </template>
-
-<script>
-import { vueWindowSizeMixin } from 'vue-window-size/option-api';
-
-export default {
-  mixins: [vueWindowSizeMixin()],
-};
-</script>
 ```
 
 ## Config for Option API
@@ -152,10 +117,10 @@ Change delay time of resize event.
 
 e.g.
 
-```JavaScript
+```TypeScript
 import { createApp } from 'vue';
 import App from "./App.vue";  // your App component
-import { VueWindowSizePlugin } from 'vue-window-size/option-api';
+import { VueWindowSizePlugin } from 'vue-window-size/plugin';
 
 const app = createApp(App);
 app.use(VueWindowSizePlugin, {
@@ -169,8 +134,8 @@ app.use(VueWindowSizePlugin, {
 
 Same as config for Option API.
 
-```JavaScript
-import { vueWindowSizeAPI } from 'vue-window-size/option-api';
+```TypeScript
+import { vueWindowSizeAPI } from 'vue-window-size/plugin'; // or 'vue-window-size/mixin'
 
 vueWindowSizeAPI.config({
   delay: 100,
@@ -184,7 +149,7 @@ Usually called automatically.
 Please call it if you want to use it again after destroy.
 
 ```JavaScript
-import { vueWindowSizeAPI } from 'vue-window-size/option-api';
+import { vueWindowSizeAPI } from 'vue-window-size/plugin'; // or 'vue-window-size/mixin'
 
 vueWindowSizeAPI.init();
 ```
@@ -194,7 +159,7 @@ vueWindowSizeAPI.init();
 Remove the resize event.
 
 ```JavaScript
-import { vueWindowSizeAPI } from 'vue-window-size/option-api';
+import { vueWindowSizeAPI } from'vue-window-size/plugin'; // or 'vue-window-size/mixin'
 
 vueWindowSizeAPI.destroy();
 ```
