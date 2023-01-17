@@ -1,6 +1,31 @@
 {
-  "name": "vue-window-size-root",
-  "private": true,
+  "name": "vue-window-size",
+  "version": "2.0.0",
+  "description": "Reactivity window size for Vue.js.",
+  "type": "module",
+  "main": "./composition-api/dist/index.cjs",
+  "module": "./composition-api/dist/index.js",
+  "types": "./composition-api/dist/index.d.js",
+  "exports": {
+    ".": {
+      "import": "./composition-api/dist/index.js",
+      "types": "./composition-api/dist/index.d.js",
+      "require": "./composition-api/dist/index.cjs"
+    },
+    "./plugin": {
+      "import": "./plugin/dist/index.js",
+      "types": "./plugin/dist/index.d.js",
+      "require": "./plugin/dist/index.cjs"
+    },
+    "./mixin": {
+      "import": "./mixin/dist/index.js",
+      "types": "./mixin/dist/index.d.js",
+      "require": "./mixin/dist/index.cjs"
+    },
+    "./package.json": "./package.json",
+    "./plugin/package.json": "./plugin/package.json",
+    "./mixin/package.json": "./mixin/package.json"
+  },
   "repository": "https://github.com/mya-ake/vue-window-size.git",
   "bugs": {
     "url": "https://github.com/mya-ake/vue-window-size/issues"
@@ -11,20 +36,34 @@
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "build": "nx run-many --target=build",
+    "test:unit": "nx run-many --target=test:unit",
+    "test:integration": "nx run-many --target=test:integration",
     "prepare": "husky install"
-  },
-  "dependencies": {
-    "window-resize-subject": "^1.5.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
+    "@vitest/coverage-c8": "^0.27.1",
     "@vue/compiler-dom": "^3.2.45",
     "happy-dom": "^8.1.4",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "nx": "^15.5.1",
     "prettier": "^2.8.3",
     "typescript": "^4.9.4"
   },
+  "peerDependencies": {
+    "vue": "^3.0 || ^2.7"
+  },
+  "files": [
+    "composition-api",
+    "plugin",
+    "mixin"
+  ],
+  "keywords": [
+    "vue.js",
+    "window size"
+  ],
   "lint-staged": {
     "*.{js,ts,json,md,yml}": "prettier --write"
   },

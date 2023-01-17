@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "~/*": ["./src/*"],
+      "~fixtures/*": ["fixtures/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "../composition-api/tests/issue-346.spec.ts",
+    "../composition-api/tests/issue-346.spec.ts",
+    "../option-api/src/option-api.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
