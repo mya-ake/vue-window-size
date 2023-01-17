@@ -2743,9 +2743,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mixin-example@workspace:examples/option-api":
+"mixin-example@workspace:examples/mixin":
   version: 0.0.0-use.local
-  resolution: "mixin-example@workspace:examples/option-api"
+  resolution: "mixin-example@workspace:examples/mixin"
   dependencies:
     "@vitejs/plugin-vue": ^4.0.0
     typescript: ^4.9.3

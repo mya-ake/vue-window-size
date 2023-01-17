@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { vueWindowSizeMixin } from 'vue-window-size-mixin';
+import { vueWindowSizeMixin, vueWindowSizeAPI } from 'vue-window-size-mixin';
 
 export default defineComponent({
   mixins: [vueWindowSizeMixin()],
