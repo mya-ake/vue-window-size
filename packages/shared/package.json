@@ -10,7 +10,7 @@
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@vitejs/plugin-vue": "^4.0.0",
-    "@vitest/coverage-c8": "^0.27.1",
+    "@vitest/coverage-c8": "^0.28.2",
     "@vue/compiler-dom": "^3.2.45",
     "@vue/runtime-core": "^3.2.45",
     "@vue/test-utils": "^2.2.7",
