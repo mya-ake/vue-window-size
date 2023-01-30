@@ -299,23 +299,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:15.5.1":
-  version: 15.5.1
-  resolution: "@nrwl/cli@npm:15.5.1"
+"@nrwl/cli@npm:15.6.3":
+  version: 15.6.3
+  resolution: "@nrwl/cli@npm:15.6.3"
   dependencies:
-    nx: 15.5.1
-  checksum: 6fac24afa5bb7dcaf05a974342d79337e359be6cc52e600d83598729527a3005d28d2697b44acca422bc1967e760008e930c6b32026c34f3fe9d67e2f4faf61e
+    nx: 15.6.3
+  checksum: 66219cbf0a99d7cc4bb8bcf1c56f42e088e825b862d0df44710c4aa2466ce3d2c7286e0d208327e8325e5e370c3a0bad205df52ac311774f9d7a960e8a41c7c5
   languageName: node
   linkType: hard
 
-"@nrwl/tao@npm:15.5.1":
-  version: 15.5.1
-  resolution: "@nrwl/tao@npm:15.5.1"
+"@nrwl/tao@npm:15.6.3":
+  version: 15.6.3
+  resolution: "@nrwl/tao@npm:15.6.3"
   dependencies:
-    nx: 15.5.1
+    nx: 15.6.3
   bin:
     tao: index.js
-  checksum: d884a8a62356dd7babdd26789531499ad95cc5c37dd22c04a381896d8f70a95b1eba52e3792d04df862cc0cad22ec2d609c9ab47a995413cdf4add9ac7ce628e
+  checksum: ff56f21c7a2063a7719ed192e7997121dae42135bbff504f4847af86bede9db34fbd6c5d9573cd5368d594c44dd68c4e8d9ab5d57b346113e86015b2f4db47bc
   languageName: node
   linkType: hard
 
@@ -988,13 +988,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:4.1.0":
-  version: 4.1.0
-  resolution: "chalk@npm:4.1.0"
+"chalk@npm:^4.1.0":
+  version: 4.1.2
+  resolution: "chalk@npm:4.1.2"
   dependencies:
     ansi-styles: ^4.1.0
     supports-color: ^7.1.0
-  checksum: 5561c7b4c063badee3e16d04bce50bd033e1be1bf4c6948639275683ffa7a1993c44639b43c22b1c505f0f813a24b1889037eb182546b48946f9fe7cdd0e7d13
+  checksum: fe75c9d5c76a7a98d45495b91b2172fa3b7a09e0cc9370e5c8feb1c567b85c4288e2b3fded7cfdd7359ac28d6b3844feb8b82b8686842e93d23c827c417e83fc
   languageName: node
   linkType: hard
 
@@ -2927,18 +2927,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:15.5.1, nx@npm:^15.5.1":
-  version: 15.5.1
-  resolution: "nx@npm:15.5.1"
+"nx@npm:15.6.3, nx@npm:^15.5.1":
+  version: 15.6.3
+  resolution: "nx@npm:15.6.3"
   dependencies:
-    "@nrwl/cli": 15.5.1
-    "@nrwl/tao": 15.5.1
+    "@nrwl/cli": 15.6.3
+    "@nrwl/tao": 15.6.3
     "@parcel/watcher": 2.0.4
     "@yarnpkg/lockfile": ^1.1.0
     "@yarnpkg/parsers": ^3.0.0-rc.18
     "@zkochan/js-yaml": 0.0.6
     axios: ^1.0.0
-    chalk: 4.1.0
+    chalk: ^4.1.0
     cli-cursor: 3.1.0
     cli-spinners: 2.6.1
     cliui: ^7.0.2
@@ -2976,7 +2976,7 @@ __metadata:
       optional: true
   bin:
     nx: bin/nx.js
-  checksum: 010a38660eaff660aa13080c1247ed7606e35eb6eb5eb9cf6b921d6354f1590b84b2af4d8524a068dc804584cda0f61f3f2940c0aecee6214bfdd580a5aedf6e
+  checksum: 09fe9a8f75a0e8e656930c1eaa9ab1eb39f4ffb9e964e7f3381920bf71cf75f8b3c0e0845b303c30e5818eb1c1eac9aa728e6f1d94d59743298b4bdf8f4d70ab
   languageName: node
   linkType: hard
 
