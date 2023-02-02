@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "v2.7",
+    "vue": "v3.2",
     "vue-window-size-composition-api": "workspace:*"
   },
   "devDependencies": {
