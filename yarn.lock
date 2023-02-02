@@ -2015,8 +2015,8 @@ __metadata:
   linkType: hard
 
 "happy-dom@npm:^8.1.4":
-  version: 8.1.4
-  resolution: "happy-dom@npm:8.1.4"
+  version: 8.2.3
+  resolution: "happy-dom@npm:8.2.3"
   dependencies:
     css.escape: ^1.5.1
     he: ^1.2.0
@@ -2024,7 +2024,7 @@ __metadata:
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: cebb4585f9054dae410ea27a742328bc0a42981746d38ff0fd8521a259422a1c5025e36f12bd9e25c30130a63d6652a83bf949d1d5ddcfea5b2354c35ad21dae
+  checksum: 368ead51d4ddcf073963b35eb9d3cdfb7f74aea34bcaaeb207b9f804e62bf01d3c9b86655d2a5cf4ef44d13a55f4dc80f6c0ebb4dcf6af58c25d80b6d3d95bd4
   languageName: node
   linkType: hard
 
