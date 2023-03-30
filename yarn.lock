@@ -1156,7 +1156,7 @@ __metadata:
   resolution: "composition-api-example@workspace:examples/composition-api"
   dependencies:
     "@vitejs/plugin-vue": ^4.0.0
-    typescript: ^4.9.3
+    typescript: ^5.0.3
     vite: ^4.0.0
     vue: ^3.2.45
     vue-tsc: ^1.0.11
@@ -2748,7 +2748,7 @@ __metadata:
   resolution: "mixin-example@workspace:examples/mixin"
   dependencies:
     "@vitejs/plugin-vue": ^4.0.0
-    typescript: ^4.9.3
+    typescript: ^5.0.3
     vite: ^4.0.0
     vue: ^3.2.45
     vue-tsc: ^1.0.11
@@ -3182,7 +3182,7 @@ __metadata:
   resolution: "plugin-example@workspace:examples/plugin"
   dependencies:
     "@vitejs/plugin-vue": ^4.0.0
-    typescript: ^4.9.3
+    typescript: ^5.0.3
     vite: ^4.0.0
     vue: ^3.2.45
     vue-tsc: ^1.0.11
@@ -3999,23 +3999,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.9.3, typescript@npm:^4.9.4":
-  version: 4.9.4
-  resolution: "typescript@npm:4.9.4"
+"typescript@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "typescript@npm:5.0.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: e782fb9e0031cb258a80000f6c13530288c6d63f1177ed43f770533fdc15740d271554cdae86701c1dd2c83b082cea808b07e97fd68b38a172a83dbf9e0d0ef9
+  checksum: 3cce0576d218cb4277ff8b6adfef1a706e9114a98b4261a38ad658a7642f1b274a8396394f6cbff8c0ba852996d7ed2e233e9b8431d5d55ac7c2f6fea645af02
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.9.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>":
-  version: 4.9.4
-  resolution: "typescript@patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=ad5954"
+"typescript@patch:typescript@^5.0.3#~builtin<compat/typescript>":
+  version: 5.0.3
+  resolution: "typescript@patch:typescript@npm%3A5.0.3#~builtin<compat/typescript>::version=5.0.3&hash=ad5954"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 1caaea6cb7f813e64345190fddc4e6c924d0b698ab81189b503763c4a18f7f5501c69362979d36e19c042d89d936443e768a78b0675690b35eb663d19e0eae71
+  checksum: 9ec0a8eed38d46cc2c8794555b7674e413604c56c159f71b8ff21ce7f17334a44127a68724cb2ef8221ff3b19369f8f05654e8a5266621d7d962aeed889bd630
   languageName: node
   linkType: hard
 
@@ -4063,7 +4063,7 @@ __metadata:
   resolution: "v2-composition-api-example@workspace:examples/v2-composition-api"
   dependencies:
     "@vitejs/plugin-vue2": ^2.2.0
-    typescript: ^4.9.3
+    typescript: ^5.0.3
     vite: ^4.0.0
     vue: v2.7
     vue-tsc: ^1.0.11
@@ -4238,7 +4238,7 @@ __metadata:
     "@vue/test-utils": ^2.2.7
     happy-dom: ^8.1.4
     tsup: ^6.5.0
-    typescript: ^4.9.4
+    typescript: ^5.0.3
     vite: ^4.0.4
     vite-tsconfig-paths: ^4.0.3
     vitest: ^0.27.1
@@ -4259,7 +4259,7 @@ __metadata:
     "@vue/test-utils": ^2.2.7
     happy-dom: ^8.1.4
     tsup: ^6.5.0
-    typescript: ^4.9.4
+    typescript: ^5.0.3
     vite: ^4.0.4
     vite-tsconfig-paths: ^4.0.3
     vitest: ^0.27.1
@@ -4280,7 +4280,7 @@ __metadata:
     "@vue/test-utils": ^2.2.7
     happy-dom: ^8.1.4
     tsup: ^6.5.0
-    typescript: ^4.9.4
+    typescript: ^5.0.3
     vite: ^4.0.4
     vite-tsconfig-paths: ^4.0.3
     vitest: ^0.27.1
@@ -4302,7 +4302,7 @@ __metadata:
     "@vue/test-utils": ^2.2.7
     happy-dom: ^8.1.4
     tsup: ^6.5.0
-    typescript: ^4.9.4
+    typescript: ^5.0.3
     vite: ^4.0.4
     vite-tsconfig-paths: ^4.0.3
     vitest: ^0.27.1
@@ -4324,7 +4324,7 @@ __metadata:
     lint-staged: ^13.1.0
     nx: ^15.5.1
     prettier: ^2.8.3
-    typescript: ^4.9.4
+    typescript: ^5.0.3
   peerDependencies:
     vue: ^3.0 || ^2.7
   languageName: unknown
