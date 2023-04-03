@@ -16,7 +16,7 @@
     "@vue/compiler-dom": "^3.2.45",
     "@vue/runtime-core": "^3.2.45",
     "@vue/test-utils": "^2.2.7",
-    "happy-dom": "^8.1.4",
+    "happy-dom": "^9.1.0",
     "tsup": "^6.5.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
