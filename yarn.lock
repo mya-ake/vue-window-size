@@ -2014,17 +2014,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^8.1.4":
-  version: 8.1.4
-  resolution: "happy-dom@npm:8.1.4"
+"happy-dom@npm:^9.6.1":
+  version: 9.6.1
+  resolution: "happy-dom@npm:9.6.1"
   dependencies:
     css.escape: ^1.5.1
     he: ^1.2.0
-    node-fetch: ^2.x.x
+    iconv-lite: ^0.6.3
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: cebb4585f9054dae410ea27a742328bc0a42981746d38ff0fd8521a259422a1c5025e36f12bd9e25c30130a63d6652a83bf949d1d5ddcfea5b2354c35ad21dae
+  checksum: 33749298a0b3777d6a3ca7933e437ef629f3f5dc92b2967007a55d326d390c04598a1cbc88acdf93a515d01311205f5e0704795e973907e6ffe5fb8b367758d6
   languageName: node
   linkType: hard
 
@@ -2127,7 +2127,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
+"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2, iconv-lite@npm:^0.6.3":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
   dependencies:
@@ -2831,20 +2831,6 @@ __metadata:
   dependencies:
     node-gyp: latest
   checksum: 2369986bb0881ccd9ef6bacdf39550e07e089a9c8ede1cbc5fc7712d8e2faa4d50da0e487e333d4125f8c7a616c730131d1091676c9d499af1d74560756b4a18
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:^2.x.x":
-  version: 2.6.7
-  resolution: "node-fetch@npm:2.6.7"
-  dependencies:
-    whatwg-url: ^5.0.0
-  peerDependencies:
-    encoding: ^0.1.0
-  peerDependenciesMeta:
-    encoding:
-      optional: true
-  checksum: 8d816ffd1ee22cab8301c7756ef04f3437f18dace86a1dae22cf81db8ef29c0bf6655f3215cb0cdb22b420b6fe141e64b26905e7f33f9377a7fa59135ea3e10b
   languageName: node
   linkType: hard
 
@@ -3894,13 +3880,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tr46@npm:~0.0.3":
-  version: 0.0.3
-  resolution: "tr46@npm:0.0.3"
-  checksum: 726321c5eaf41b5002e17ffbd1fb7245999a073e8979085dacd47c4b4e8068ff5777142fc6726d6ca1fd2ff16921b48788b87225cbc57c72636f6efa8efbffe3
-  languageName: node
-  linkType: hard
-
 "tree-kill@npm:^1.2.2":
   version: 1.2.2
   resolution: "tree-kill@npm:1.2.2"
@@ -4236,7 +4215,7 @@ __metadata:
     "@vue/compiler-dom": ^3.2.45
     "@vue/runtime-core": ^3.2.45
     "@vue/test-utils": ^2.2.7
-    happy-dom: ^8.1.4
+    happy-dom: ^9.6.1
     tsup: ^6.5.0
     typescript: ^4.9.4
     vite: ^4.0.4
@@ -4257,7 +4236,7 @@ __metadata:
     "@vue/compiler-dom": ^3.2.45
     "@vue/runtime-core": ^3.2.45
     "@vue/test-utils": ^2.2.7
-    happy-dom: ^8.1.4
+    happy-dom: ^9.6.1
     tsup: ^6.5.0
     typescript: ^4.9.4
     vite: ^4.0.4
@@ -4278,7 +4257,7 @@ __metadata:
     "@vue/compiler-dom": ^3.2.45
     "@vue/runtime-core": ^3.2.45
     "@vue/test-utils": ^2.2.7
-    happy-dom: ^8.1.4
+    happy-dom: ^9.6.1
     tsup: ^6.5.0
     typescript: ^4.9.4
     vite: ^4.0.4
@@ -4300,7 +4279,7 @@ __metadata:
     "@vue/compiler-dom": ^3.2.45
     "@vue/runtime-core": ^3.2.45
     "@vue/test-utils": ^2.2.7
-    happy-dom: ^8.1.4
+    happy-dom: ^9.6.1
     tsup: ^6.5.0
     typescript: ^4.9.4
     vite: ^4.0.4
@@ -4319,7 +4298,7 @@ __metadata:
     "@types/node": ^18.11.18
     "@vitest/coverage-c8": ^0.27.1
     "@vue/compiler-dom": ^3.2.45
-    happy-dom: ^8.1.4
+    happy-dom: ^9.6.1
     husky: ^8.0.3
     lint-staged: ^13.1.0
     nx: ^15.5.1
@@ -4353,13 +4332,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webidl-conversions@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "webidl-conversions@npm:3.0.1"
-  checksum: c92a0a6ab95314bde9c32e1d0a6dfac83b578f8fa5f21e675bc2706ed6981bc26b7eb7e6a1fab158e5ce4adf9caa4a0aee49a52505d4d13c7be545f15021b17c
-  languageName: node
-  linkType: hard
-
 "webidl-conversions@npm:^4.0.2":
   version: 4.0.2
   resolution: "webidl-conversions@npm:4.0.2"
@@ -4387,16 +4359,6 @@ __metadata:
   version: 3.0.0
   resolution: "whatwg-mimetype@npm:3.0.0"
   checksum: ce08bbb36b6aaf64f3a84da89707e3e6a31e5ab1c1a2379fd68df79ba712a4ab090904f0b50e6693b0dafc8e6343a6157e40bf18fdffd26e513cf95ee2a59824
-  languageName: node
-  linkType: hard
-
-"whatwg-url@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "whatwg-url@npm:5.0.0"
-  dependencies:
-    tr46: ~0.0.3
-    webidl-conversions: ^3.0.0
-  checksum: b8daed4ad3356cc4899048a15b2c143a9aed0dfae1f611ebd55073310c7b910f522ad75d727346ad64203d7e6c79ef25eafd465f4d12775ca44b90fa82ed9e2c
   languageName: node
   linkType: hard
 
